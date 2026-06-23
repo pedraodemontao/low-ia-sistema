@@ -1,0 +1,9 @@
+{
+  "name": "low-ia",
+  "description": "Sistema de modelagem de ofertas low-ticket de ponta a ponta no Claude Code: espionar oferta validada, modelar, diferenciar (fugir do leilao), construir funil + paginas + tracking, e analisar/otimizar o funil por dado. Orquestrado por /nova-oferta.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pedro (Bravy)",
+    "url": "https://github.com/barroslab"
+  }
+}

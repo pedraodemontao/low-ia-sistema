@@ -1,0 +1,7 @@
+.env
+.env.local
+node_modules/
+.DS_Store
+ofertas/**/02-coleta/
+ofertas/**/06-imagens/*
+!ofertas/**/06-imagens/.gitkeep
