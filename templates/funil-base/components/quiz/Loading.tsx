@@ -28,7 +28,7 @@ export function Loading({ msgs, onDone }: { msgs: string[]; onDone: () => void }
   return (
     <div className="loading-box">
       <h2 className="gold" style={{ marginBottom: 18 }}>
-        {destravando ? "Destravando a sua leitura…" : "Revelando o seu seu resultado…"}
+        {destravando ? "Quase lá…" : "Revelando o seu resultado…"}
       </h2>
       <ul className="loading-steps">
         {msgs.map((m, i) => (

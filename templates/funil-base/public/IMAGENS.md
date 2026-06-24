@@ -1,11 +1,13 @@
-# Slots de imagem (etapa 6 — Higgsfield) ✅
+# Slots de imagem (etapa 6 — Higgsfield)
 
-Geradas e conectadas às páginas. Originais full-res também em `../06-imagens/`.
+O template usa **um placeholder único** (`placeholder.svg`) em todos os slots. Gere as suas imagens (etapa 6) e substitua slot a slot — troque o `src` no componente indicado por `/{seu-arquivo}.webp` e salve o arquivo aqui em `public/`.
 
-| Slot | Status | Modelo | Onde aparece |
-|------|--------|--------|--------------|
-| `hero.png` (16:10) | ✅ | soul_2 | LP — `app/page.tsx` (capa) |
-| `selo-anjo.png` (1:1) | ✅ | nano_banana_pro | LP — tela de resultado |
-| `mockup-mapa.png` (16:10) | ✅ | nano_banana_pro | `app/oferta/page.tsx` (checkout) |
+| Slot | Onde aparece | Sugestão de formato |
+|------|--------------|---------------------|
+| Capa/hero | `app/page.tsx` | 16:10 |
+| Avatar/selo do resultado | `components/quiz/Leitura.tsx` | 1:1 |
+| Imagem da ativação | `components/quiz/Ativacao.tsx` | 1:1 |
+| Mockup do produto | `app/oferta/page.tsx`, `app/obrigado/page.tsx` | 16:10 |
+| Imagem do upsell | `app/upsell/page.tsx` | 1:1 |
 
-Para regerar: trocar o arquivo aqui em `public/` (as páginas usam `<img src="/{slot}.png">`).
+> As páginas usam `<img src="/placeholder.svg">`. Otimize as suas imagens pra WebP antes de subir.

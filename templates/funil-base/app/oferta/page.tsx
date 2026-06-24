@@ -15,7 +15,7 @@ export default function OfertaPage() {
 
 function Oferta() {
   const params = useSearchParams();
-  const resultado = params.get("resultado") || "seu seu resultado";
+  const resultado = params.get("resultado") || "seu resultado";
   const nome = params.get("nome") || "";
   const [seg, setSeg] = useState(15 * 60);
 
@@ -39,38 +39,36 @@ function Oferta() {
   return (
     <main className="wrap">
       <div className="center">
-        <span className="eyebrow">Mapa da Resultado</span>
+        <span className="eyebrow">[nome do produto/entregável]</span>
         <h1>
           {nome ? `${nome}, ` : ""}seu resultado é{" "}
-          <span className="gold">{resultado}</span>. Veja o que está travando o seu
-          dinheiro, e como destravar.
+          <span className="gold">{resultado}</span>. [Promessa — o que ele revela e o próximo passo.]
         </h1>
         <p className="lead">
-          Receba agora o seu Mapa da Resultado, qual bloqueio segura a sua
-          renda, a oração que abre os caminhos financeiros e a hora certa de pedir.
+          [Lead da oferta — descreva o que a pessoa recebe e por que importa agora.]
         </p>
-        <img loading="lazy" decoding="async" className="hero-img" src="/mockup-mapa.webp" alt="Mockup do Mapa da Resultado" />
+        <img loading="lazy" decoding="async" className="hero-img" src="/placeholder.svg" alt="[mockup do seu produto]" />
       </div>
 
       <div className="card">
         <p className="muted" style={{ marginBottom: 8 }}>Você recebe hoje:</p>
         <ul className="stack">
-          <li>✅ Mapa da Resultado do seu seu resultado (PDF personalizado)</li>
-          <li>✅ Oração que <strong>destrava o dinheiro</strong> em áudio</li>
-          <li>🎁 Bônus: Oração de Abertura de Caminhos Financeiros</li>
-          <li>🎁 Bônus: Calendário dos 7 dias de resultado</li>
-          <li>🛡️ Garantia 7 dias: não sentiu os caminhos se movendo, devolvemos 100%</li>
+          <li>✅ [entregável principal]</li>
+          <li>✅ [entregável secundário]</li>
+          <li>🎁 Bônus: [bônus 1]</li>
+          <li>🎁 Bônus: [bônus 2]</li>
+          <li>🛡️ Garantia [X] dias: [condição da garantia]</li>
         </ul>
       </div>
 
       <div className="center">
-        <p className="muted">de <s>R$ 97,00</s> por apenas</p>
-        <div className="price">R$ 37,00</div>
+        <p className="muted">de <s>R$ [de]</s> por apenas</p>
+        <div className="price">R$ [preço]</div>
         <p className="scarcity">
           ⏳ Esta página sai do ar em <span className="timer">{mm}:{ss}</span>
         </p>
         <button className="btn" onClick={comprar}>
-          Quero destravar minha resultado →
+          [CTA de compra] →
         </button>
         <p className="muted" style={{ marginTop: 12 }}>
           Pagamento seguro · acesso imediato por e-mail

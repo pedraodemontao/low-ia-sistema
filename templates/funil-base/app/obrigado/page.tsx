@@ -14,30 +14,28 @@ export default function ObrigadoPage() {
 function Obrigado() {
   const params = useSearchParams();
   const nome = params.get("nome") || "";
-  const resultado = params.get("resultado") || "seu seu resultado";
+  const resultado = params.get("resultado") || "seu resultado";
 
   return (
     <main className="wrap">
       <div className="center">
         <span className="eyebrow">Pagamento confirmado ✅</span>
         <h1>
-          {nome ? `${nome}, ` : ""}sua porta de resultado com{" "}
-          <span className="gold">{resultado}</span> está aberta.
+          {nome ? `${nome}, ` : ""}[confirmação — o acesso/resultado com{" "}
+          <span className="gold">{resultado}</span> está liberado].
         </h1>
         <p className="lead">
-          Seu <strong>Mapa da Resultado</strong> e a oração que destrava o
-          dinheiro já estão a caminho do seu e-mail. Abra ainda hoje, a hora
-           do dinheiro de mais força é a que está no seu resultado.
+          [Mensagem de obrigado — o que ela recebe, onde e o que fazer agora.]
         </p>
-        <img loading="lazy" decoding="async" className="hero-img" src="/mockup-mapa.webp" alt="Mapa da Resultado" />
+        <img loading="lazy" decoding="async" className="hero-img" src="/placeholder.svg" alt="[imagem do produto entregue]" />
       </div>
 
       <div className="card">
         <p className="muted" style={{ marginBottom: 8 }}>Seus próximos passos:</p>
         <ul className="stack">
           <li>📩 Confira o e-mail (e a caixa de spam), chega em até 5 minutos</li>
-          <li>🔊 Ouça a oração em áudio na sua hora ideal</li>
-          <li>📅 Comece o Calendário dos 7 dias de resultado hoje</li>
+          <li>🔊 [próximo passo 2]</li>
+          <li>📅 [próximo passo 3]</li>
         </ul>
       </div>
 

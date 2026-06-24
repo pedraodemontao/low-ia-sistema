@@ -4,9 +4,9 @@ import "./globals.css";
 import { Pixel } from "@/components/Pixel";
 
 export const metadata: Metadata = {
-  title: "seu resultado, Descubra qual dos 72 perfis destrava o seu dinheiro",
+  title: "[Título da sua oferta — promessa principal]",
   description:
-    "Pela sua data de nascimento, revelamos qual dos 72 perfis rege a sua resultado, o bloqueio que trava o seu dinheiro e a oração que destrava os seus caminhos financeiros.",
+    "[Descrição/meta da sua oferta — o que o teste revela e o benefício central. Preencha por oferta.]",
 };
 
 export const viewport: Viewport = {

@@ -28,14 +28,14 @@ export function Ativacao({
       <Particles count={34} />
       <span className="alert-badge">⚠️ JANELA DE ATIVAÇÃO ⚠️</span>
       <h1>
-        {nome ? `${nome}, ` : ""}o selo de{" "}
-        <span className="gold">{resultado.nome}</span> está prestes a abrir o seu dinheiro.
+        {nome ? `${nome}, ` : ""}[gancho da ativação com{" "}
+        <span className="gold">{resultado.nome}</span> — o que está prestes a acontecer].
       </h1>
 
       <div className="ativacao-circle">
         <div className={`aura${tocando ? " ativo" : ""}`} />
-        <img loading="lazy" decoding="async" src="/ad-financeiro-visual.webp" alt="Potencial financeiro" />
-        <span className="ativacao-tag">POTENCIAL FINANCEIRO!</span>
+        <img loading="lazy" decoding="async" src="/placeholder.svg" alt="[imagem da ativação]" />
+        <span className="ativacao-tag">[etiqueta de destaque]</span>
       </div>
 
       {!conectado ? (
@@ -56,7 +56,7 @@ export function Ativacao({
             autoStart
             onPlayingChange={setTocando}
             onEnd={() => { setOuviu(true); confettiGold(); }}
-            introLabel="▶ Ouça a sua janela de ativação financeira"
+            introLabel="▶ Ouça a sua ativação"
             playingLabel={`🔊 ${resultado.nome} está revelando a sua janela…`}
             doneLabel="✨ A sua janela está aberta, toque no botão abaixo."
           />
@@ -64,12 +64,12 @@ export function Ativacao({
           {ouviu ? (
             <>
               <button className="btn btn-pulse" onClick={onCta}>
-                QUERO DESTRAVAR MINHAS DATAS →
+                [CTA para a oferta] →
               </button>
               <p className="scarcity">⏳ Esta janela fica aberta por tempo curtíssimo.</p>
             </>
           ) : (
-            <p className="muted ritual-hint">🔒 Ouça a ativação até o fim para liberar as suas datas…</p>
+            <p className="muted ritual-hint">🔒 Ouça a ativação até o fim para continuar…</p>
           )}
         </>
       )}

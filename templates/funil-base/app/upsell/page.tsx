@@ -14,7 +14,7 @@ export default function UpsellPage() {
 function Upsell() {
   const router = useRouter();
   const params = useSearchParams();
-  const resultado = params.get("resultado") || "seu seu resultado";
+  const resultado = params.get("resultado") || "seu resultado";
   const nome = params.get("nome") || "";
   const [recusou, setRecusou] = useState(false);
   const [seg, setSeg] = useState(5 * 60);
@@ -37,32 +37,30 @@ function Upsell() {
         <div className="center">
           <span className="eyebrow">Última chance</span>
           <h1>
-            Espera, {nome || "antes de sair"}. Não deixe a porta do seu dinheiro
-            fechar com <span className="gold">{resultado}</span>.
+            Espera, {nome || "antes de sair"}. [Downsell — reforce o que ela perde
+            com <span className="gold">{resultado}</span>.]
           </h1>
           <p className="lead">
-            Você destravou o bloqueio de hoje. Mas o dinheiro tem uma brecha
-            <strong> nova a cada dia</strong>, e sem o lembrete certo você perde a
-            abertura e volta pro aperto amanhã.
+            [Lead do downsell — versão reduzida da oferta anterior por um preço menor.]
           </p>
         </div>
 
         <div className="card">
           <p className="muted" style={{ marginBottom: 8 }}>Versão reduzida, só hoje:</p>
           <ul className="stack">
-            <li>✅ Mensagem diária de resultado do seu resultado por <strong>3 meses</strong></li>
-            <li>🛡️ Mesma garantia de 7 dias</li>
+            <li>✅ [entregável reduzido]</li>
+            <li>🛡️ Mesma garantia de [X] dias</li>
           </ul>
         </div>
 
         <div className="center">
-          <p className="muted">de <s>R$ 39,00</s> por apenas</p>
-          <div className="price">R$ 14,00</div>
+          <p className="muted">de <s>R$ [de]</s> por apenas</p>
+          <div className="price">R$ [preço do downsell]</div>
           <button
             className="btn"
             onClick={irParaObrigado}
           >
-            Sim, quero o lembrete que abre meu dinheiro →
+            [CTA de aceite do downsell] →
           </button>
           <p className="muted" style={{ marginTop: 14 }}>
             <a
@@ -70,7 +68,7 @@ function Upsell() {
               onClick={(e) => { e.preventDefault(); irParaObrigado(); }}
               style={{ color: "var(--muted)", textDecoration: "underline" }}
             >
-              Não, prefiro deixar o dinheiro travado
+              [link de recusa]
             </a>
           </p>
         </div>
@@ -85,33 +83,29 @@ function Upsell() {
       <div className="center">
         <span className="eyebrow">⏳ Oferta única, não aparece de novo</span>
         <h1>
-          {nome ? `${nome}, ` : ""}<span className="gold">{resultado}</span> não
-          destrava o seu dinheiro só hoje. Ele tem uma abertura pra cada mês do
-          seu ano.
+          {nome ? `${nome}, ` : ""}<span className="gold">{resultado}</span> [gancho
+          do upsell — por que a oferta principal não basta sozinha].
         </h1>
         <p className="lead">
-          O Mapa destravou o bloqueio de <strong>agora</strong>. Mas as
-          oportunidades de dinheiro, os meses de ganho e as ciladas mudam o ano
-          todo, e seu resultado tem o movimento certo pra cada um. Sem isso, você vê o
-          dinheiro passar sempre tarde demais.
+          [Lead do upsell — a versão ampliada/contínua do que ela acabou de comprar.]
         </p>
-        <img loading="lazy" decoding="async" className="hero-img" src="/selo-resultado.webp" alt="Selo do seu resultado" style={{ maxWidth: 220, margin: "18px auto" }} />
+        <img loading="lazy" decoding="async" className="hero-img" src="/placeholder.svg" alt="[imagem do upsell]" style={{ maxWidth: 220, margin: "18px auto" }} />
       </div>
 
       <div className="card">
-        <p className="muted" style={{ marginBottom: 8 }}>Adicione agora ao seu Mapa:</p>
+        <p className="muted" style={{ marginBottom: 8 }}>Adicione agora:</p>
         <ul className="stack">
-          <li>✅ <strong>Leitura financeira do seu ano</strong>, mês a mês, onde {resultado} abre dinheiro pra você</li>
-          <li>✅ <strong>Mensagem diária de resultado</strong> por 12 meses (no WhatsApp/e-mail)</li>
-          <li>✅ Os meses de <strong>ganho</strong> e os meses de <strong>cuidado com dinheiro</strong> marcados</li>
-          <li>🎁 Bônus: orações de abertura financeira para cada estação do ano</li>
-          <li>🛡️ Garantia 7 dias: não sentiu diferença, devolvemos 100%</li>
+          <li>✅ <strong>[entregável principal do upsell]</strong></li>
+          <li>✅ <strong>[entregável recorrente]</strong></li>
+          <li>✅ [entregável complementar]</li>
+          <li>🎁 Bônus: [bônus do upsell]</li>
+          <li>🛡️ Garantia [X] dias: [condição]</li>
         </ul>
       </div>
 
       <div className="center">
-        <p className="muted">um ano inteiro de resultado guiada por menos que um lanche</p>
-        <div className="price">R$ 39,00</div>
+        <p className="muted">[âncora de valor — ex: por menos que um lanche]</p>
+        <div className="price">R$ [preço do upsell]</div>
         <p className="scarcity">
           ⏳ Esta condição some em <span className="timer">{mm}:{ss}</span> e não volta
         </p>
@@ -119,7 +113,7 @@ function Upsell() {
           className="btn"
           onClick={irParaObrigado}
         >
-          Sim! Quero meu resultado abrindo meu dinheiro o ano todo →
+          [CTA de aceite do upsell] →
         </button>
         <p className="muted" style={{ marginTop: 14 }}>
           <a
@@ -127,7 +121,7 @@ function Upsell() {
             onClick={(e) => { e.preventDefault(); setRecusou(true); }}
             style={{ color: "var(--muted)", textDecoration: "underline" }}
           >
-            Não quero abrir meu dinheiro o ano todo, prefiro arriscar sozinho
+            [link de recusa]
           </a>
         </p>
       </div>

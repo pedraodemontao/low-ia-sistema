@@ -9,7 +9,7 @@ Funil gamificado provado (quiz → áudios → VSL → checkout + upsell, com Pi
   - `lib/resultado.ts` — o mecanismo (mapeia data → 1 de N resultados). Troque `RESULTADOS` e os textos.
   - `lib/audios.ts` — roteiro dos áudios (placeholder).
   - copy das páginas (`app/*`) — headlines/textos a preencher.
-  - `public/` — imagens (hero, selo, mockup, criativo) são **exemplos** — substitua pelas suas.
+  - `public/` — todos os slots usam `placeholder.svg`; gere as suas imagens (etapa 6) e troque slot a slot (ver `public/IMAGENS.md`).
 
 ## Integrações (placeholder — plugue o seu)
 - `lib/pixel.ts` → `SEU_PIXEL_ID_AQUI`

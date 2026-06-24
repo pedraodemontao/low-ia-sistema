@@ -21,8 +21,8 @@ const VSL = dynamic(() => import("@/components/quiz/VSL").then((m) => m.VSL));
 
 type Fase = "capa" | "quiz" | "loading" | "leitura" | "email" | "ativacao" | "vsl";
 
-const HEADLINE = "Seu Resultado da Resultado está tentando te entregar uma chave, e você não está ouvindo?";
-const SUB = "Este teste de 30 segundos revela qual dos 72 perfis destrava o seu dinheiro.";
+const HEADLINE = "[Headline do quiz — a pergunta/promessa principal da sua oferta]";
+const SUB = "[Subheadline — o que este teste de 30 segundos revela]";
 
 const TOTAL_PASSOS = STEPS.length;
 
@@ -107,23 +107,21 @@ export default function Funil() {
       {fase === "capa" && (
         <div className="center capa">
           <Particles />
-          <span className="alert-badge">⚠️ ALERTA DE RESULTADO ⚠️</span>
+          <span className="alert-badge">⚠️ [selo de alerta/urgência] ⚠️</span>
           <h1>
-            Não é falta de sorte. É um{" "}
-            <span className="gold">[seu mecanismo] herdado</span> travando o
-            seu dinheiro há anos.
+            [Hook da capa — abra com o problema. Destaque{" "}
+            <span className="gold">[o mecanismo central]</span> em dourado.]
           </h1>
           <p className="lead">
-            1 dos 72 perfis governa a saída disso pra você, e a sua data
-            de nascimento diz qual. Teste de 30 segundos.
+            [Promessa do teste — o que ele revela e por que vale os 30 segundos.]
           </p>
           <button className="btn capa-cta" onClick={() => { track("QuizStart"); setFase("quiz"); setPasso(0); }}>
-            Começar meu teste →
+            Começar o teste →
           </button>
-          <p className="muted">Teste de 30 segundos · gratuito · anônimo 🕊️</p>
-          <img loading="eager" fetchPriority="high" decoding="async" className="hero-img capa-hero" src="/hero.webp" alt="Resultado da resultado" />
+          <p className="muted">Teste de 30 segundos · gratuito · anônimo</p>
+          <img loading="eager" fetchPriority="high" decoding="async" className="hero-img capa-hero" src="/placeholder.svg" alt="[imagem da sua oferta]" />
           <p className="social-proof">
-            <b>+50.000 pessoas</b> já descobriram o resultado que destrava o dinheiro delas.
+            <b>[prova social]</b> [ex: +X pessoas já fizeram o teste].
           </p>
         </div>
       )}
@@ -131,7 +129,7 @@ export default function Funil() {
       {fase === "quiz" && (
         <div>
           <div className="center">
-            <span className="alert-badge">⚠️ ALERTA DE RESULTADO ⚠️</span>
+            <span className="alert-badge">⚠️ [selo de alerta/urgência] ⚠️</span>
           </div>
           <div className="quiz-head">
             <h1>{HEADLINE}</h1>
@@ -206,10 +204,10 @@ export default function Funil() {
 
       {fase === "email" && (
         <div className="step">
-          <p className="scarcity center">⚠️ O portal de ativação fica aberto por tempo curtíssimo.</p>
-          <div className="center"><h2>Digite o seu e-mail para receber o restante da sua leitura</h2></div>
+          <p className="scarcity center">⚠️ [escassez — ex: a próxima etapa fica aberta por tempo curto].</p>
+          <div className="center"><h2>Digite o seu e-mail para receber o restante do seu resultado</h2></div>
           <p className="muted center" style={{ marginBottom: 8 }}>
-            O seu mapa de frequência é denso, você vai precisar dele em mãos para não sair da conexão.
+            [microcopy — por que pedir o e-mail aqui (ex: enviar o material completo).]
           </p>
           <input
             type="email"
@@ -221,7 +219,7 @@ export default function Funil() {
           />
           <div style={{ height: 12 }} />
           <button className="btn" onClick={confirmarEmail}>
-            Ver o meu seu resultado →
+            Ver o meu resultado →
           </button>
           <p className="privacy">🔒 Não enviamos spam. Seus dados são confidenciais.</p>
         </div>

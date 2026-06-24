@@ -31,16 +31,16 @@ export function Leitura({
   return (
     <div className={`center step reveal immersive${tocando ? " ativo" : ""}`}>
       <Particles count={30} />
-      <span className="eyebrow">Resultado nº {resultado.numero} de 72</span>
+      <span className="eyebrow">Resultado nº {resultado.numero}</span>
       <h1>
-        {nome ? `${nome}, ` : ""}seu seu resultado é{" "}
+        {nome ? `${nome}, ` : ""}seu resultado é{" "}
         <span className="gold">{resultado.nome}</span>.
       </h1>
 
       <div className="reveal-avatar-wrap">
         <div className={`aura${tocando ? " ativo" : ""}`} />
-        <img loading="lazy" decoding="async" className={`reveal-avatar${reduzido ? "" : " pop"}`} src="/hero.webp" alt={`Resultado ${resultado.nome}`} />
-        <img loading="lazy" decoding="async" className={`reveal-selo${reduzido ? "" : " spin"}`} src="/selo-resultado.webp" alt="" aria-hidden />
+        <img loading="lazy" decoding="async" className={`reveal-avatar${reduzido ? "" : " pop"}`} src="/placeholder.svg" alt={`Resultado ${resultado.nome}`} />
+        <img loading="lazy" decoding="async" className={`reveal-selo${reduzido ? "" : " spin"}`} src="/placeholder.svg" alt="" aria-hidden />
       </div>
 
       <p className="lead">{primeira}</p>
@@ -65,7 +65,7 @@ export function Leitura({
             onGate={() => setOuviu(true)}
             onPlayingChange={setTocando}
             onEnd={() => setOuviu(true)}
-            introLabel={`▶ Ouça a leitura de ${resultado.nome} sobre o seu dinheiro`}
+            introLabel={`▶ Ouça a leitura de ${resultado.nome}`}
             playingLabel={`🔊 ${resultado.nome} está revelando a sua conexão…`}
             doneLabel="Leitura inicial concluída, continue para receber o resto."
           />

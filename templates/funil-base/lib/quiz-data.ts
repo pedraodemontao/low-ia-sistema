@@ -3,7 +3,7 @@
 // As chaves `mes` e `dia` alimentam o engine (lib/resultado.ts). As demais são exemplo — ajuste o texto.
 
 export type StepKey =
-  | "sinal" | "signo" | "mes" | "dia" | "decada"
+  | "sinal" | "perfil" | "mes" | "dia" | "decada"
   | "estadoCivil" | "desafio" | "sexo" | "nome";
 
 export type Opcao = { label: string; icon?: string; value: string | number };
@@ -30,10 +30,9 @@ const ABERTURA = tiles([
   ["Opção D", "🇩"], ["Opção E", "🇪"], ["Opção F", "🇫"],
 ]);
 
-const SIGNOS = tiles([
-  ["Áries", "♈"], ["Touro", "♉"], ["Gêmeos", "♊"], ["Câncer", "♋"],
-  ["Leão", "♌"], ["Virgem", "♍"], ["Libra", "♎"], ["Escorpião", "♏"],
-  ["Sagitário", "♐"], ["Capricórnio", "♑"], ["Aquário", "♒"], ["Peixes", "♓"],
+// TEMPLATE: segundo qualificador — troque pelas opções da SUA oferta.
+const QUALIFICA2 = tiles([
+  ["Opção 1", "1️⃣"], ["Opção 2", "2️⃣"], ["Opção 3", "3️⃣"], ["Opção 4", "4️⃣"],
 ]);
 
 export const MESES = [
@@ -54,7 +53,7 @@ const SEXOS = tiles([["Feminino", "♀️"], ["Masculino", "♂️"]]);
 
 export const STEPS: StepConfig[] = [
   { key: "sinal", titulo: "[Pergunta de abertura — gancho do seu nicho]", cols: 3, big: true, opcoes: ABERTURA },
-  { key: "signo", titulo: "Clique no SEU signo", cols: 4, opcoes: SIGNOS },
+  { key: "perfil", titulo: "[Segunda pergunta de qualificação]", cols: 4, opcoes: QUALIFICA2 },
   { key: "mes", titulo: "Em que mês você nasceu?", cols: 3, opcoes: MESES_OPC },
   { key: "dia", titulo: "Qual é o seu dia de nascimento?", cols: 6, opcoes: DIAS_OPC },
   { key: "desafio", titulo: "[Pergunta de qualificação — a dor principal]", cols: 2, big: true, opcoes: QUALIFICA },

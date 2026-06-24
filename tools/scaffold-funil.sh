@@ -17,6 +17,7 @@ mkdir -p "$DST"
 rsync -a \
   --exclude 'node_modules' --exclude '.next' --exclude '.git' --exclude '.vercel' \
   --exclude '.env' --exclude '.env.*' \
+  --exclude 'PROGRESSO.md' --exclude 'ESCOPO-GAMIFICACAO.md' \
   --exclude 'public/audio/*' --exclude 'public/video/*' \
   "$SRC/" "$DST/"
 
@@ -30,7 +31,7 @@ cat > "$DST/CUSTOMIZE.md" <<'MD'
 
 ## 1. Dados da oferta (o essencial)
 - [ ] `lib/quiz-data.ts` — passos do quiz (STEPS), reações. **O que mais muda.**
-- [ ] `lib/anjos.ts` — o "motor" do mecanismo (no modelo: data→anjo). Trocar pela lógica do SEU mecanismo, ou simplificar.
+- [ ] `lib/resultado.ts` — o "motor" do mecanismo (mapeia a resposta → 1 de N resultados). Trocar `RESULTADOS`/`DOMINIOS` e a mensagem pela lógica da SUA oferta.
 - [ ] `lib/audios.ts` — roteiro dos áudios (AUDIO1/2_TEXTO). Depois: `tools/gerar-audios.sh`.
 - [ ] `lib/social-proof.ts` — nomes/valores da prova social.
 

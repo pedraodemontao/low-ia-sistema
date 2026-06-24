@@ -25,8 +25,8 @@ export function VSL({ nome }: { nome: string; onCta?: () => void }) {
     <div className="center step immersive">
       <span className="eyebrow">A revelação final do seu resultado</span>
       <h1>
-        {nome ? `${nome}, ` : ""}veja o que{" "}
-        <span className="gold">{"o seu resultado preparou pro seu dinheiro"}</span>.
+        {nome ? `${nome}, ` : ""}veja{" "}
+        <span className="gold">{"[gancho da VSL — o que o vídeo vai revelar]"}</span>.
       </h1>
 
       {VSL_CFG.tipo === "vturb" ? (
