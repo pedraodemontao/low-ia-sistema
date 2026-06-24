@@ -25,7 +25,7 @@ A cada etapa: reúna o input (lê o `.md` anterior) → **delegue ao especialist
 | **— Persona** | skill **`persona`** (avatar do nicho) | `copy/avatar.md` |
 | **5 Diferenciação ★** | skill **`hormozi-ceo`** (nova oferta + money model: front + order bump + upsell + downsell) | `05-diferenciacao.md` |
 | **6 Imagens/VSL** | skill **`design`** + Higgsfield MCP + `tools/fetch-pexels.mjs` / `tools/gerar-video-ad.sh` (segue `templates/criativo-checklist.md` e `templates/vsl-estrutura.md`) | `06-imagens/` |
-| **7 Páginas** | adaptar o funil Next.js de `templates/funil-base` (quiz/VSL + checkout + upsell + Pixel + CAPI) | `ofertas/<nome>/07-paginas/` |
+| **7 Páginas** | adaptar o funil Next.js de `templates/funil-base` (quiz/VSL + checkout + upsell + Pixel + CAPI) **+ polir com skill `ui-ux-pro-max`** (UI/UX das páginas) e skill `design`/`design-system` (paleta/tokens/identidade visual) | `ofertas/<nome>/07-paginas/` |
 | **7b Entrega MVP** | `tools/gerar-entrega-pdf.sh` (a partir de `templates/entrega-mvp.html`) | `entrega/*.pdf` |
 | **8 Copy** | skill **`copy`** (lê `copy/avatar.md` + diferenciação; tom agressivo/urgente) | `08-copy.md` |
 | **8b Compliance** | agent **`compliance`** revisa a copy do ANÚNCIO antes de subir (anti-ban Meta — crítico em saúde/dinheiro) | copy revisada |

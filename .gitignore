@@ -5,3 +5,8 @@ node_modules/
 ofertas/**/02-coleta/
 ofertas/**/06-imagens/*
 !ofertas/**/06-imagens/.gitkeep
+
+# Python venv/cache dentro das skills empacotadas (recriar via requirements.txt)
+skills/**/.venv/
+**/__pycache__/
+*.pyc

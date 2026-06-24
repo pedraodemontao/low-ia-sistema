@@ -12,7 +12,9 @@ Automação de **modelagem de ofertas low-ticket**. Pega oferta que já vende, m
 - **`/construir-funil`** — adapta o funil Next.js (quiz/VSL/checkout/upsell + Pixel/CAPI).
 - **`/analisar-funil`** — agent `analista-funil`: ROAS real, onde vaza, placement, ação (cruza Meta+Cakto+VTurb).
 
-Agentes: `espiao`, `analista-funil` (em `agents/`). Reusa skills globais: `persona`, `hormozi-ceo`, `copy`, `design`, `market-explorer`.
+Agentes: `espiao`, `analista-funil` (em `agents/`). Reusa skills globais: `persona`, `hormozi-ceo`, `copy`, `design`, `design-system`, `brand`, `banner-design`, `ui-ux-pro-max`, `market-explorer`.
+
+**Qualidade das páginas (etapa 7):** ao construir/adaptar o funil, SEMPRE polir com a skill `ui-ux-pro-max` (UI/UX: hierarquia, espaçamento, tipografia, contraste, mobile, acessibilidade) e definir a identidade visual da oferta com `design` + `design-system` (paleta/tokens em `app/globals.css`). A máquina (componentes/animação/tracking do `funil-base`) não muda — o polimento é em layout, legibilidade e CTA.
 
 ## Swipe Library (`swipe/`) — o cérebro que compõe
 Inteligência de copy/oferta GLOBAL que cresce a cada oferta. `swipe/observado.md` (mercado, do `espiao`) + `swipe/validado.md` ★ (provado pela Cakto, do `analista-funil`). Loop: espionar→observado → rodar → `analista-funil` promove o que pagou→validado → `copy` lê validado primeiro na próxima oferta. **Ao escrever copy/diferenciar, SEMPRE consultar `swipe/validado.md` do nicho** (via `/swipe <nicho>`) antes de começar do zero. `copy` (skill global) deve ler `swipe/validado.md` como swipe de maior prioridade.
