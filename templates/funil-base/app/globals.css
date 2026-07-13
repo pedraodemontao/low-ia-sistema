@@ -1,13 +1,16 @@
+/* TEMPLATE — paleta NEUTRA de partida (sem identidade de nenhuma oferta).
+   Por oferta: derive a identidade da referência (skill `design`/`design-system`)
+   e sobrescreva estes tokens. Nunca faça deploy com a paleta neutra crua. */
 :root {
-  --bg: #0a0a1a;
-  --bg-soft: #14142b;
-  --gold: #e8c879;
-  --gold-bright: #f7e0a3;
-  --text: #f3f1ea;
-  --muted: #a9a6bd;
-  --line: #2a2a45;
-  --cta: #d4af37;
-  --cta-text: #1a1300;
+  --bg: #0f0f12;
+  --bg-soft: #17171c;
+  --gold: #9aa0a6; /* accent — TROQUE pela cor da oferta (o nome fica por legado) */
+  --gold-bright: #c4c8cd; /* accent claro — TROQUE */
+  --text: #ededed;
+  --muted: #9a9aa2;
+  --line: #2a2a30;
+  --cta: #6b6b73; /* CTA neutro — TROQUE pela cor de ação da oferta */
+  --cta-text: #ffffff;
   --danger: #ff6b6b;
 }
 
