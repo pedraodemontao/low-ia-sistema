@@ -306,6 +306,7 @@ var STEPS = [
       { e:'⏭️', t:'Prefiero saltar este paso', v:'skip' } ] },
 
   { id:'T22', type:'emotional', section:4, varName:'emo_fear',
+    img:'assets/t22-mirror-latam.webp',
     quote:'“Tengo miedo de no volver a sentirme bonita al mirarme al espejo”',
     options:[
       { e:'🙋‍♀️', t:'Me identifico', v:'yes' },
