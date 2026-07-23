@@ -461,10 +461,10 @@
 <script>
 (function(){
   /* Checkout Hotmart (placeholder, reemplazar en la etapa 9) */
-  var CHECKOUT_URL = 'https://pay.hotmart.com/A106789289T';
-  /* Checkout con descuento de la ruleta (20% OFF), placeholder Hotmart */
+  var CHECKOUT_URL = 'https://pay.hotmart.com/A106789289T?checkoutMode=10';
+  /* Checkout con descuento de la ruleta (20% OFF) */
   /* Oferta "Ruleta 20% OFF (funil)" criada na Hotmart: US$8 (código 1gr1hw6z). */
-  var CHECKOUT_URL_DISCOUNT = 'https://pay.hotmart.com/A106789289T?off=1gr1hw6z';
+  var CHECKOUT_URL_DISCOUNT = 'https://pay.hotmart.com/A106789289T?off=1gr1hw6z&checkoutMode=10';
   function usd(v){ return 'US$' + v.toFixed(2).replace('.', ','); }
   function usdShort(v){ return 'US$' + (v % 1 === 0 ? String(v) : v.toFixed(2).replace('.', ',')); }
 
