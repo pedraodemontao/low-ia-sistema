@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><body><pre id="o">...</pre>
+<script>
+const f=document.createElement('iframe'); f.width=390; f.height=844; f.src='../site/results.html';
+f.onload=()=>setTimeout(()=>{
+  const d=f.contentDocument,w=f.contentWindow;
+  const img=d.querySelector('img[src*="op-02-mina-app"]');
+  const r=img.getBoundingClientRect();
+  const cs=w.getComputedStyle(img);
+  document.getElementById('o').textContent=[
+    'topo_absoluto_y='+Math.round(r.top+f.contentWindow.scrollY),
+    'altura_render='+Math.round(r.height)+' largura='+Math.round(r.width),
+    'aspect-ratio='+cs.aspectRatio, 'object-position='+cs.objectPosition, 'object-fit='+cs.objectFit
+  ].join('\n');
+},1500);
+document.body.appendChild(f);
+</script></body></html>

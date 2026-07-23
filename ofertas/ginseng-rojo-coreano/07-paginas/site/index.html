@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Test de Piel Coreano, Ritual Seúl 50+</title>
+<meta name="description" content="Haz el test de piel gratis de 1 minuto de la Dra. Mina Seo y descubre si el Pegamento Rojo Coreano (ginseng rojo) puede reafirmar tu piel, y recibe tu fórmula personalizada.">
+<meta name="robots" content="noindex">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/quiz.css?v=3">
+<link rel="preload" as="image" href="assets/t01-hero.webp" type="image/webp">
+<script src="js/pixel.js?v=2"></script>
+</head>
+<body>
+
+<div class="app" id="quiz-root"></div>
+
+<footer class="q-footer">
+  Los resultados pueden variar de persona a persona. Este test tiene carácter informativo y no sustituye la orientación médica.
+  Las fotos de antes y después son ilustrativas del método. © Test de Piel Coreano · Ritual Seúl 50+
+</footer>
+
+<!-- Pixel: js/pixel.js · CAPI server-side e links Hotmart: pendentes -->
+
+<script>
+  /* Fallback global de imagen: mientras la etapa 6 no genera las fotos reales,
+     cualquier <img> que falle cae al placeholder (fase de captura). */
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.target.onerror = null;
+      e.target.src = 'assets/placeholder.svg';
+    }
+  }, true);
+
+  /* Stubs de tracking/experiment: los scripts originales (tracking.js / experiment.js /
+     posthog / utmify / pixel) fueron removidos de este sitio estático. El engine llama
+     a track() y getUTMQuery() como globales, estos stubs evitan ReferenceError.
+     La etapa 9 reemplaza esto por el Pixel + CAPI reales. */
+  /* Rede de segurança: pixel.js já define os dois. Se ele falhar ao carregar
+     (bloqueador), estes fallbacks evitam ReferenceError e o quiz segue. */
+  window.track = window.track || function () {};
+  window.getUTMQuery = window.getUTMQuery || function () { return ''; };
+</script>
+
+<script src="js/config.js?v=4"></script>
+<script src="js/engine.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><body><pre id="o">...</pre>
+<script>
+const f=document.createElement('iframe'); f.width=390; f.height=844; f.src='../site/index.html';
+f.onload=()=>setTimeout(()=>{
+  const d=f.contentDocument, w=f.contentWindow;
+  const app=d.querySelector('.app');
+  const cta=d.querySelector('.btn,.cta-bar');
+  const p=d.querySelector('.inter p, .hero-cap, p');
+  const info=[
+    'iframe.clientWidth='+d.documentElement.clientWidth,
+    'body.scrollWidth='+d.body.scrollWidth,
+    'app.width='+(app?app.getBoundingClientRect().width:'?')+' left='+(app?Math.round(app.getBoundingClientRect().left):'?'),
+    'app.computed maxWidth='+(app?w.getComputedStyle(app).maxWidth:'?'),
+    'cta.width='+(cta?Math.round(cta.getBoundingClientRect().width):'?')+' right='+(cta?Math.round(cta.getBoundingClientRect().right):'?'),
+    'p.width='+(p?Math.round(p.getBoundingClientRect().width):'?')+' right='+(p?Math.round(p.getBoundingClientRect().right):'?'),
+    'html.fontSize='+w.getComputedStyle(d.documentElement).fontSize
+  ];
+  document.getElementById('o').textContent=info.join('\n');
+},1500);
+document.body.appendChild(f);
+</script></body></html>

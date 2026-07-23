@@ -2,6 +2,8 @@
 .env.local
 node_modules/
 .DS_Store
+.next/
+.vercel/
 ofertas/**/02-coleta/
 ofertas/**/06-imagens/*
 !ofertas/**/06-imagens/.gitkeep
@@ -10,3 +12,4 @@ ofertas/**/06-imagens/*
 skills/**/.venv/
 **/__pycache__/
 *.pyc
+.vercel

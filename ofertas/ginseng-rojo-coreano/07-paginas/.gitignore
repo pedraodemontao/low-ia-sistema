@@ -1,0 +1,20 @@
+# deps
+/node_modules
+# next
+/.next
+/out
+# vercel
+.vercel
+# env / segredos
+.env
+.env.*
+# build / misc
+/build
+*.tsbuildinfo
+.DS_Store
+/coverage
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/public/video/

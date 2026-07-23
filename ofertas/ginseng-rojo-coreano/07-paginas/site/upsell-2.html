@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta especial · Protocolo Coreano Anti-Manchas</title>
+<meta name="robots" content="noindex">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/quiz.css">
+<style>
+  .up{max-width:480px;margin:0 auto;padding:14px 18px 30px}
+  .up-kicker{display:block;width:fit-content;margin:0 auto 8px;background:var(--blueberry-bg);border:1px solid var(--blueberry-light);color:var(--blueberry-deep);font-size:11.5px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;padding:5px 13px;border-radius:20px}
+  .up-head{font-size:24px;font-weight:900;line-height:1.18;text-align:center;margin:2px 0 12px;letter-spacing:-.3px}
+  .up-head span{color:var(--blueberry-deep)}
+  .up-intro{font-size:14px;line-height:1.55;color:var(--ink-soft);text-align:center;margin:-4px 0 16px}
+  .us-timer{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red-bg);border:1.5px solid var(--blueberry-light);border-radius:12px;padding:9px 14px;font-size:12px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.7px;margin-bottom:14px}
+  .us-timer b{font-size:19px;color:var(--ink);letter-spacing:.5px}
+  .vsl{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#E05A4C,#A8322B);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(168,50,43,.3);margin-bottom:8px}
+  .vsl .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .vsl .lab{margin-top:12px;color:#fff;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;opacity:.92}
+  .vsl-cap{text-align:center;font-size:12px;color:var(--ink-soft);font-weight:600;margin-bottom:16px}
+  .lead{font-size:14.5px;line-height:1.6;color:var(--ink-soft);text-align:center;margin-bottom:16px}
+  .lead b{color:var(--ink)}
+  .incl-title{font-size:12px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:var(--blueberry-deep);text-align:center;margin:6px 0 10px}
+  .incl{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+  .incl .it{display:flex;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 13px;font-size:14.5px;line-height:1.45;font-weight:500;color:var(--ink);align-items:flex-start}
+  .incl .it .ck{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .incl .it b{font-weight:800}
+  .price-box{background:#fff;border:2px solid var(--blueberry-light);border-radius:18px;text-align:center;padding:18px;margin:8px 0 6px;box-shadow:0 14px 30px rgba(28,30,46,.08)}
+  .price-box .anchor{font-size:14px;color:var(--ink-soft);font-weight:700}
+  .price-box .now{font-size:46px;font-weight:900;color:var(--green);line-height:1.05;letter-spacing:-1.5px;margin:2px 0}
+  .price-box .once{font-size:12px;color:var(--ink-soft);font-weight:700}
+  .secure{text-align:center;font-size:12px;color:var(--ink-soft);font-weight:700;margin-top:12px}
+  .secure svg{width:13px;height:13px;vertical-align:-2px;margin-right:2px}
+  .refuse{display:block;width:100%;text-align:center;font-size:13px;color:var(--ink-soft);text-decoration:underline;font-weight:600;margin:8px 0;padding:14px 0;min-height:46px;background:none;border:none;cursor:pointer;font-family:'Inter'}
+  .guarantee{background:linear-gradient(165deg,#14543A,#0D3A28);border-radius:16px;padding:18px;margin:20px 0 8px;text-align:center;color:#fff;box-shadow:0 18px 40px rgba(13,58,40,.3)}
+  .guarantee .seal{width:54px;height:54px;margin:0 auto 8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#E8D9B0,#C19A3D 60%,#8F6F25);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3A2D0D;border:2.5px solid #F3E8C8}
+  .guarantee .seal b{font-size:16px;font-weight:900;line-height:1}
+  .guarantee .seal small{font-size:6.5px;font-weight:900;letter-spacing:1px}
+  .guarantee .gt{font-weight:900;font-size:16px;margin-bottom:6px}
+  .guarantee p{font-size:12.5px;line-height:1.55;color:#CBE7D6}
+  .guarantee p b{color:#fff}
+  .btn.green.big{font-size:16px;padding:17px}
+
+  /* TSL, sustituye la VSL */
+  .tsl-hero{display:block;width:100%;margin:0 auto 4px;border-radius:16px;box-shadow:0 12px 30px rgba(28,30,46,.16)}
+  .tsl-h{font-size:19px;font-weight:900;line-height:1.25;color:var(--ink);margin:22px 0 8px;letter-spacing:-.2px}
+  .tsl-p{font-size:15px;line-height:1.65;color:var(--ink-soft);margin-bottom:12px}
+  .tsl-p b{color:var(--ink);font-weight:800}
+  .tsl-quote{background:var(--blueberry-bg);border-left:3px solid var(--red);border-radius:0 12px 12px 0;
+    padding:14px 16px;margin:18px 0;font-size:14.5px;line-height:1.6;font-style:italic;color:var(--ink)}
+  .tsl-quote span{display:block;font-style:normal;font-size:12px;font-weight:800;color:var(--ink-soft);margin-top:8px}
+</style>
+<script src="js/pixel.js?v=2"></script>
+</head>
+<body>
+
+<div class="up">
+
+  <!-- HEADER (igual results/index) -->
+  <div class="topbar">
+    <div class="brand">
+      <svg class="logo-badge" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Pegamento Rojo">
+        <defs><linearGradient id="lgr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F58A7D"/><stop offset="1" stop-color="#E05A4C"/></linearGradient></defs>
+        <path d="M20 4C20 4 7 18.5 7 27A13 13 0 0 0 33 27C33 18.5 20 4 20 4Z" fill="url(#lgr)"/>
+        <ellipse cx="15.2" cy="26" rx="2.8" ry="4.4" fill="#fff" opacity=".45"/>
+      </svg>
+      <div class="brand-tx"><b>Pegamento <span>Rojo</span></b><small>Dra. Mina Seo · Test de Piel</small></div>
+    </div>
+    <div class="trust"><b>★ 4.8</b><br>37 mil+</div>
+  </div>
+
+  <!-- TIMER -->
+  <div class="us-timer">Esta oferta expira en <b id="timer">10:00</b></div>
+
+  <span class="up-kicker">Un último regalo, y te dejo empezar</span>
+  <h1 class="up-head">Antes de que cierres: hay algo que <span>el Pegamento no puede hacer solo</span></h1>
+  <p class="up-intro">La Dra. Mina prefiere decírtelo ahora que dejarte descubrirlo en la semana 3.</p>
+  <!-- TSL: mockup do produto no lugar da VSL -->
+  <img class="tsl-hero" src="assets/mock-manchas-v2.webp" alt="Protocolo Coreano Anti-Manchas, guía ilustrada en la app" width="660" height="750" fetchpriority="high">
+
+  <p class="lead">El Pegamento firma tu piel, pero <b>no empareja las manchas</b> que ya se formaron. Y los aclaradores de farmacia inflaman: la mancha vuelve más oscura.</p>
+
+  <h2 class="tsl-h">Una mancha no es suciedad. Por eso no sale frotando.</h2>
+  <p class="tsl-p">Es un <b>parche de melanina</b> que tu propia piel puso encima de una micro-herida inflamada: el sol, la depilación, el roce de la ropa, los cambios hormonales de esta edad. Mientras la inflamación siga ahí abajo, la mancha se vuelve a formar. Aunque la aclares. Aunque la tapes.</p>
+
+  <h2 class="tsl-h">Por eso fallan los aclaradores de farmacia</h2>
+  <p class="tsl-p">Son ácidos fuertes y artificiales. Queman la capa de arriba, la mancha parece aclarar dos semanas… y vuelve <b>más oscura que antes</b>, porque el ácido inflamó todavía más la piel que ya estaba inflamada. Del limón y el agua oxigenada ni hablamos: eso no aclara, eso quema.</p>
+  <p class="tsl-p">Si ya intentaste alguno y la mancha volvió peor, no fue culpa tuya. Fue el método.</p>
+
+  <h2 class="tsl-h">Las coreanas hacen lo contrario</h2>
+  <p class="tsl-p">No atacan la mancha: <b>apagan la inflamación que la sostiene</b>, y recién ahí aclaran. Y lo hacen con algo que tienes en la cocina: <b>arroz fermentado</b>. Al fermentar, nace solo el <b>ácido kójico</b> — el mismo que las clínicas cobran carísimo, pero en su versión natural y suave, junto con la niacinamida del propio arroz.</p>
+  <p class="tsl-p">Desinflama y aclara al mismo tiempo, de a poquito, sin castigar la piel. Por eso es gradual. Y por eso funciona.</p>
+
+  <div class="tsl-quote">"Lo empecé por las axilas, que era lo que más vergüenza me daba. A las tres semanas volví a usar blusa sin mangas en el cumpleaños de mi nieta."
+    <span>Elena R., 61 años</span></div>
+
+  <p class="lead">Por eso preparé el <b>Protocolo Coreano Anti-Manchas</b> — la máscara de arroz con ácido kójico natural que <b>desinflama y aclara de a poco</b>, para el rostro, la axila y la ingle.</p>
+
+  <div class="incl-title">Lo que incluye hoy</div>
+  <div class="incl">
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>La <b>receta de la máscara de arroz coreana</b> (ácido kójico natural)</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>El <b>protocolo de 21 días</b> para rostro, axila e ingle</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>La <b>guía ilustrada paso a paso</b> dentro de la app</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>100% natural</b>: arroz, leche y 2 ingredientes baratos de tu cocina</span></div>
+  </div>
+
+  <div class="price-box">
+    <div class="anchor">De <s>US$97</s></div>
+    <div class="now">US$27</div>
+    <div class="once">pago único · acceso inmediato en la app</div>
+    <!-- Hotmart 1-click aqui; por ora redireciona pro próximo passo -->
+    <a class="btn green big" id="cta-accept" href="https://pay.hotmart.com/F106805224W" style="margin-top:14px">SÍ, QUIERO EL PROTOCOLO POR US$27 &rarr;</a>
+    <div class="secure">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" fill="#2E9E5B"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Garantía de 30 días · Compra segura
+    </div>
+  </div>
+
+  <button class="refuse" id="cta-refuse">No, gracias</button>
+
+  <!-- GARANTÍA -->
+  <div class="guarantee">
+    <div class="seal"><b>30</b><small>DÍAS</small></div>
+    <div class="gt">Garantía de 30 días</div>
+    <p><b>Prueba el protocolo sin riesgo.</b> Si no ves tu tono aclarar, escribe un email y te devolvemos cada centavo. La guía se queda contigo.</p>
+  </div>
+
+</div>
+
+<footer class="q-footer">
+  Los resultados pueden variar. Este material tiene carácter informativo y no sustituye la orientación médica. Los testimonios reflejan experiencias individuales.
+  © Ritual Seúl 50+
+</footer>
+
+<!-- Fallback global de imagen + stubs de tracking (copiado de index.html). La etapa 9 reemplaza los stubs por el Pixel + CAPI reales. -->
+<script>
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.target.onerror = null;
+      e.target.src = 'assets/placeholder.svg';
+    }
+  }, true);
+  window.track = window.track || function () {};
+  window.getUTMQuery = window.getUTMQuery || function () { return ''; };
+  window.appendUTM = window.appendUTM || function (u) { return u; };
+</script>
+
+<!-- Timer + navegación del flujo (aceptar / rechazar). En producción, aceptar dispara el 1-click de Hotmart. -->
+<script>
+(function(){
+  /* Aceptar → checkout de Hotmart (href del botón). El regreso al embudo
+     (gracias.html) se configura en Hotmart, en la página de gracias del producto. */
+  var NEXT_REFUSE = 'downsell-2.html';
+
+  var secs = 600;
+  var el = document.getElementById('timer');
+  function tick(){
+    var m = Math.floor(secs/60), s = secs%60;
+    el.textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+    if(secs<=0){ clearInterval(iv); return; }
+    secs--;
+  }
+  tick();
+  var iv = setInterval(tick, 1000);
+
+  var accept = document.getElementById('cta-accept');
+  var checkout = accept.getAttribute('href');
+  accept.href = window.appendUTM(checkout);
+  accept.addEventListener('click', function(){ window.track('upsell2_accept'); });
+  document.getElementById('cta-refuse').addEventListener('click', function(e){
+    e.preventDefault(); window.track('upsell2_refuse'); window.location.href = NEXT_REFUSE;
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Pago confirmado! · Ritual Seúl 50+</title>
+<meta name="robots" content="noindex">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/quiz.css">
+<style>
+  .up{max-width:480px;margin:0 auto;padding:14px 18px 30px}
+  .confirm{background:var(--green-bg);border:2px solid #BFE5CD;border-radius:16px;padding:22px 18px;text-align:center;margin:6px 0 18px}
+  .confirm .badge{width:60px;height:60px;margin:0 auto 12px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(46,158,91,.35)}
+  .confirm h1{font-size:23px;font-weight:900;line-height:1.18;letter-spacing:-.3px;margin-bottom:6px}
+  .confirm h1 span{color:var(--green)}
+  .confirm p{font-size:14px;color:var(--ink-soft);line-height:1.55;font-weight:500}
+  .steps-title{font-size:12px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:var(--blueberry-deep);text-align:center;margin:8px 0 12px}
+  .steps{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+  .steps .st{display:flex;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:14px;align-items:flex-start}
+  .steps .st .n{width:28px;height:28px;flex:0 0 28px;border-radius:50%;background:var(--blueberry);color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .steps .st .tx{font-size:14.5px;line-height:1.5;color:var(--ink-soft)}
+  .steps .st .tx b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px;font-weight:800}
+  .dra{display:flex;gap:13px;align-items:center;background:var(--blueberry-bg);border:1.5px solid var(--blueberry-light);border-radius:16px;padding:15px;margin:6px 0 20px}
+  .dra img{width:56px;height:56px;flex:0 0 56px;border-radius:50%;object-fit:cover;object-position:center 20%}
+  .dra .msg{font-size:13px;line-height:1.55;color:var(--ink)}
+  .dra .msg b{display:block;font-size:12px;color:var(--blueberry-deep);margin-top:6px;font-weight:800}
+  .btn.green.big{font-size:16.5px;padding:17px}
+  .after-note{text-align:center;font-size:12px;color:var(--ink-soft);font-weight:600;margin-top:10px;line-height:1.5}
+</style>
+<script src="js/pixel.js?v=2"></script>
+</head>
+<body>
+
+<div class="up">
+
+  <!-- HEADER (igual results/index) -->
+  <div class="topbar">
+    <div class="brand">
+      <svg class="logo-badge" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Pegamento Rojo">
+        <defs><linearGradient id="lgr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F58A7D"/><stop offset="1" stop-color="#E05A4C"/></linearGradient></defs>
+        <path d="M20 4C20 4 7 18.5 7 27A13 13 0 0 0 33 27C33 18.5 20 4 20 4Z" fill="url(#lgr)"/>
+        <ellipse cx="15.2" cy="26" rx="2.8" ry="4.4" fill="#fff" opacity=".45"/>
+      </svg>
+      <div class="brand-tx"><b>Pegamento <span>Rojo</span></b><small>Dra. Mina Seo · Test de Piel</small></div>
+    </div>
+    <div class="trust"><b>★ 4.8</b><br>37 mil+</div>
+  </div>
+
+  <!-- CONFIRMACIÓN -->
+  <div class="confirm">
+    <div class="badge"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h1>¡PAGO CONFIRMADO! <span>Tu acceso está listo</span></h1>
+    <p>Tu Ritual del Pegamento Rojo Coreano ya está cargado en la app, calibrado para tu perfil de piel.</p>
+  </div>
+
+  <!-- PASOS -->
+  <div class="steps-title">Cómo empezar ahora mismo</div>
+  <div class="steps">
+    <div class="st"><span class="n">1</span><span class="tx"><b>Toca "Acceder a mi app"</b>El botón de aquí abajo te lleva directo a tu ritual.</span></div>
+    <div class="st"><span class="n">2</span><span class="tx"><b>Añádela a tu pantalla</b>Ábrela una vez y guárdala en tu inicio, como cualquier app. Sin registro: tu progreso se queda en tu teléfono.</span></div>
+    <div class="st"><span class="n">3</span><span class="tx"><b>Tu receta y tu cronograma ya están cargados</b>Empiezas tu primera noche hoy mismo, sin nada que configurar.</span></div>
+  </div>
+
+  <!-- RECADO DRA. MINA -->
+  <div class="dra">
+    <img src="assets/avatar-mina.webp" alt="Dra. Mina Seo" width="300" height="300">
+    <div class="msg">Bienvenida a tu ritual. Hiciste algo que la mayoría no hace: darle a tu piel un método, no otra crema. Nos vemos dentro de la app, noche tras noche.<b>Dra. Mina Seo</b></div>
+  </div>
+
+  <!-- BOTÓN ACCESO -->
+  <!-- Entrega do front ($10) = app PWA. Hoje aponta pro domínio vercel.app (funciona já);
+       trocar por https://app.pegamentorojo.site quando o DNS na Hostinger estiver de pé.
+       Os upsells (Cuchara/Anti-Manchas) são eBooks separados, entregues pela Hotmart por email. -->
+  <a class="btn green big" id="cta-app" href="https://pegamentorojo.vercel.app" target="_blank" rel="noopener">Acceder a mi app &rarr;</a>
+  <div class="after-note">También te enviamos el acceso a tu email. Revisa tu bandeja de entrada (y el spam, por si acaso).</div>
+
+</div>
+
+<footer class="q-footer">
+  Los resultados pueden variar. Este material tiene carácter informativo y no sustituye la orientación médica. Los testimonios reflejan experiencias individuales.
+  © Ritual Seúl 50+
+</footer>
+
+<!-- Fallback global de imagen + stubs de tracking (copiado de index.html). La etapa 9 reemplaza los stubs por el Pixel + CAPI reales. -->
+<script>
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.target.onerror = null;
+      e.target.src = 'assets/placeholder.svg';
+    }
+  }, true);
+  window.track = window.track || function () {};
+  window.getUTMQuery = window.getUTMQuery || function () { return ''; };
+</script>
+
+<script>
+  window.track('purchase_complete');
+</script>
+
+</body>
+</html>

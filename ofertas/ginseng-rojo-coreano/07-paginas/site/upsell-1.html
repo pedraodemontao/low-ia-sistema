@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta especial · El Ritual de la Cuchara Coreana</title>
+<meta name="robots" content="noindex">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/quiz.css?v=3">
+<style>
+  .up{max-width:480px;margin:0 auto;padding:14px 18px 30px}
+  .up-kicker{display:block;width:fit-content;margin:0 auto 8px;background:var(--blueberry-bg);border:1px solid var(--blueberry-light);color:var(--blueberry-deep);font-size:11.5px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;padding:5px 13px;border-radius:20px}
+  .up-head{font-size:24px;font-weight:900;line-height:1.18;text-align:center;margin:2px 0 12px;letter-spacing:-.3px}
+  .up-head span{color:var(--blueberry-deep)}
+  .up-intro{font-size:14px;line-height:1.55;color:var(--ink-soft);text-align:center;margin:-4px 0 16px}
+  .us-timer{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red-bg);border:1.5px solid var(--blueberry-light);border-radius:12px;padding:9px 14px;font-size:12px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.7px;margin-bottom:14px}
+  .us-timer b{font-size:19px;color:var(--ink);letter-spacing:.5px}
+  .vsl{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#E05A4C,#A8322B);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(168,50,43,.3);margin-bottom:8px}
+  .vsl .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .vsl .lab{margin-top:12px;color:#fff;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;opacity:.92}
+  .vsl-cap{text-align:center;font-size:12px;color:var(--ink-soft);font-weight:600;margin-bottom:16px}
+  .lead{font-size:14.5px;line-height:1.6;color:var(--ink-soft);text-align:center;margin-bottom:16px}
+  .lead b{color:var(--ink)}
+  .incl-title{font-size:12px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:var(--blueberry-deep);text-align:center;margin:6px 0 10px}
+  .incl{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+  .incl .it{display:flex;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 13px;font-size:14.5px;line-height:1.45;font-weight:500;color:var(--ink);align-items:flex-start}
+  .incl .it .ck{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .incl .it b{font-weight:800}
+  .price-box{background:#fff;border:2px solid var(--blueberry-light);border-radius:18px;text-align:center;padding:18px;margin:8px 0 6px;box-shadow:0 14px 30px rgba(28,30,46,.08)}
+  .price-box .anchor{font-size:14px;color:var(--ink-soft);font-weight:700}
+  .price-box .now{font-size:46px;font-weight:900;color:var(--green);line-height:1.05;letter-spacing:-1.5px;margin:2px 0}
+  .price-box .once{font-size:12px;color:var(--ink-soft);font-weight:700}
+  .secure{text-align:center;font-size:12px;color:var(--ink-soft);font-weight:700;margin-top:12px}
+  .secure svg{width:13px;height:13px;vertical-align:-2px;margin-right:2px}
+  .refuse{display:block;width:100%;text-align:center;font-size:13px;color:var(--ink-soft);text-decoration:underline;font-weight:600;margin:8px 0;padding:14px 0;min-height:46px;background:none;border:none;cursor:pointer;font-family:'Inter'}
+  .guarantee{background:linear-gradient(165deg,#14543A,#0D3A28);border-radius:16px;padding:18px;margin:20px 0 8px;text-align:center;color:#fff;box-shadow:0 18px 40px rgba(13,58,40,.3)}
+  .guarantee .seal{width:54px;height:54px;margin:0 auto 8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#E8D9B0,#C19A3D 60%,#8F6F25);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3A2D0D;border:2.5px solid #F3E8C8}
+  .guarantee .seal b{font-size:16px;font-weight:900;line-height:1}
+  .guarantee .seal small{font-size:6.5px;font-weight:900;letter-spacing:1px}
+  .guarantee .gt{font-weight:900;font-size:16px;margin-bottom:6px}
+  .guarantee p{font-size:12.5px;line-height:1.55;color:#CBE7D6}
+  .guarantee p b{color:#fff}
+  .btn.green.big{font-size:16px;padding:17px}
+  /* TSL, sustituye la VSL */
+  .tsl-hero{display:block;width:100%;max-width:100%;margin:0 auto;border-radius:16px;box-shadow:0 12px 30px rgba(28,30,46,.16)}
+  .tsl-h{font-size:19px;font-weight:900;line-height:1.25;color:var(--ink);margin:22px 0 8px;letter-spacing:-.2px}
+  .tsl-p{font-size:15px;line-height:1.65;color:var(--ink-soft);margin-bottom:12px}
+  .tsl-p b{color:var(--ink);font-weight:800}
+  .tsl-box{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:18px 0}
+  .tsl-box-t{font-size:12px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;color:var(--blueberry-deep);text-align:center;margin-bottom:12px}
+  .tsl-two{display:flex;align-items:center;gap:8px;text-align:center}
+  .tsl-two>div{flex:1}
+  .tsl-two b{display:block;font-size:14.5px;color:var(--ink);font-weight:800}
+  .tsl-two span{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.4;margin-top:2px}
+  .tsl-plus{flex:0 0 auto!important;font-size:20px;font-weight:900;color:var(--red)}
+  .tsl-note{font-size:12.5px;line-height:1.5;color:var(--ink-soft);text-align:center;margin:12px 0 0;font-weight:600}
+  .tsl-quote{background:var(--blueberry-bg);border-left:3px solid var(--red);border-radius:0 12px 12px 0;padding:14px 16px;margin:18px 0;font-size:14.5px;line-height:1.6;font-style:italic;color:var(--ink)}
+  .tsl-quote span{display:block;font-style:normal;font-size:12px;font-weight:800;color:var(--ink-soft);margin-top:8px}
+
+  /* prova visual do método (antes/depois) */
+  .pv-title{font-size:11.5px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;
+    color:var(--blueberry-deep);text-align:center;margin:24px 0 4px}
+  .pv-sub{font-size:13.5px;line-height:1.45;color:var(--ink-soft);text-align:center;
+    font-weight:600;margin-bottom:14px}
+  .pv-card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;
+    overflow:hidden;margin-bottom:12px}
+  .pv-card .ba-pair img{aspect-ratio:4/5;object-fit:cover;width:100%;display:block}
+  .pv-meta{padding:11px 13px 13px}
+  .pv-meta .stars{color:#E8B33C;font-size:13px;letter-spacing:1px}
+  .pv-meta .nm{font-size:13.5px;font-weight:800;color:var(--ink);margin-top:2px}
+  .pv-meta .nm span{color:var(--green);font-size:11px;font-weight:800}
+  .pv-meta .qt{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin-top:5px;font-style:italic}
+  .pv-note{font-size:11.5px;color:#A9A39A;text-align:center;line-height:1.45;margin:2px 0 4px}
+</style>
+<script src="js/pixel.js?v=2"></script>
+</head>
+<body>
+
+<div class="up">
+
+  <!-- HEADER (igual results/index) -->
+  <div class="topbar">
+    <div class="brand">
+      <svg class="logo-badge" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Pegamento Rojo">
+        <defs><linearGradient id="lgr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F58A7D"/><stop offset="1" stop-color="#E05A4C"/></linearGradient></defs>
+        <path d="M20 4C20 4 7 18.5 7 27A13 13 0 0 0 33 27C33 18.5 20 4 20 4Z" fill="url(#lgr)"/>
+        <ellipse cx="15.2" cy="26" rx="2.8" ry="4.4" fill="#fff" opacity=".45"/>
+      </svg>
+      <div class="brand-tx"><b>Pegamento <span>Rojo</span></b><small>Dra. Mina Seo · Test de Piel</small></div>
+    </div>
+    <div class="trust"><b>★ 4.8</b><br>37 mil+</div>
+  </div>
+
+  <!-- TIMER -->
+  <div class="us-timer">Esta oferta expira en <b id="timer">10:00</b></div>
+
+  <span class="up-kicker">Espera, no cierres esta página</span>
+  <h1 class="up-head">Tu pedido está confirmado. Y la Dra. Mina quiere <span>darte algo más</span></h1>
+  <p class="up-intro">Solo puede ofrecértelo ahora, y solo a quien acaba de empezar su ritual.</p>
+
+  <!-- TSL, sustituye la VSL -->
+  <img class="tsl-hero" src="assets/mock-cuchara-v2.webp" alt="El Ritual de la Cuchara Coreana, guía ilustrada en la app" width="660" height="750" fetchpriority="high">
+
+  <div class="voice-chip" style="justify-content:center;margin:14px 0 18px">
+    <img src="assets/avatar-mina.webp" alt="" width="300" height="300">
+    <div><div class="vn">Dra. Mina Seo <span>&#10004;</span></div><div class="vr">un minuto de lectura, y te dejo empezar</div></div>
+  </div>
+
+  <p class="lead">Acabas de asegurar tu receta. Antes de que empieces esta noche, quiero contarte lo único que puede hacerte perder las tres primeras semanas.</p>
+
+  <h2 class="tsl-h">La mayoría abandona en la semana 1. Y no es por falta de ganas.</h2>
+  <p class="tsl-p">Es porque cada piel reacciona a un ritmo distinto. Unas mujeres ven el cambio en cinco noches; otras, en quince. Las que no ven nada en la primera semana piensan &ldquo;a mí no me funciona&rdquo; y dejan el frasco en el cajón, justo antes de que empezara a funcionar.</p>
+
+  <h2 class="tsl-h">Lo que decide la velocidad no es la pasta. Es el músculo.</h2>
+  <p class="tsl-p">Tu piel no cuelga sola: <b>descansa sobre el músculo</b>. El Pegamento nutre y sella la piel por arriba, pero si el músculo de abajo sigue dormido, la piel tarda mucho más en verse levantada.</p>
+  <p class="tsl-p">Por eso, en Corea, <b>el Pegamento nunca va solo</b>. Va con una cuchara.</p>
+
+  <div class="tsl-box">
+    <div class="tsl-box-t">Las dos mitades del ritual</div>
+    <div class="tsl-two">
+      <div><b>La pasta</b><span>nutre y sella la piel</span></div>
+      <div class="tsl-plus">+</div>
+      <div><b>La cuchara</b><span>despierta el músculo debajo</span></div>
+    </div>
+    <p class="tsl-note">Una sola, funciona lento. Las dos juntas, en los mismos 2 minutos, es como trabaja una esteticista coreana.</p>
+  </div>
+
+  <h2 class="tsl-h">Es una cuchara. La que ya tienes en tu cocina.</h2>
+  <p class="tsl-p">Nada de aparatos de US$200 ni sesiones de clínica. Mi abuela usaba una cuchara de bronce; tú puedes usar la de metal del cajón. Lo que cambia todo no es el objeto: es <b>la temperatura, el orden y la dirección</b> de cada movimiento.</p>
+  <p class="tsl-p">Hacerlo al revés &mdash; y casi todo el mundo lo hace al revés &mdash; arrastra la piel hacia abajo en vez de levantarla. Por eso el yoga facial de internet no funciona.</p>
+
+  <div class="tsl-quote">
+    &ldquo;Hice el Pegamento sola durante nueve noches y ya casi me rendía. Sumé la cuchara y a los cuatro días mi hija me preguntó si había dormido diferente.&rdquo;
+    <span>Marisol, 58 &middot; México</span>
+  </div>
+
+  <p class="lead">Esto es <b>El Ritual de la Cuchara Coreana</b>: la secuencia completa, en guía ilustrada dentro de tu app, para hacer junto al Pegamento desde esta misma noche.</p>
+
+  <div class="incl-title">Lo que incluye hoy</div>
+  <div class="incl">
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>La <b>secuencia de la cuchara paso a paso</b>, en guía ilustrada dentro de la app</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>La <b>temperatura correcta</b>: cuándo usar la cuchara tibia y cuándo la fría</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>El <b>orden correcto</b> de los movimientos, para no trabajar en vano</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>El <b>movimiento anti-papada</b> y para el surco del contorno</span></div>
+    <div class="it"><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M6 12.5l3.5 3.5L18 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>El <b>cronograma de 21 días</b> para hacerlo junto a tu Pegamento Rojo</span></div>
+  </div>
+
+
+  <div class="pv-title">La pasta y la cuchara, juntas</div>
+  <div class="pv-sub">Mujeres que hicieron los dos pasos en los mismos 2 minutos por noche</div>
+  <div class="pv-card">
+    <div class="ba-pair">
+      <div class="half"><span class="ba-tag">Antes</span><img src="assets/t27-martha-before.webp" alt="" loading="lazy" width="460" height="616"></div>
+      <div class="half"><span class="ba-tag after">Después</span><img src="assets/t27-martha-after.webp" alt="" loading="lazy" width="460" height="616"></div>
+    </div>
+    <div class="pv-meta">
+      <div class="stars">★★★★★</div>
+      <div class="nm">Martha, 59 años <span>✔ Verificada</span></div>
+      <div class="qt">"Yo ya usaba la pasta, pero el cuello no subía. La cuchara fue lo que me devolvió la línea de la mandíbula."</div>
+    </div>
+  </div>
+  <div class="pv-card">
+    <div class="ba-pair">
+      <div class="half"><span class="ba-tag">Antes</span><img src="assets/t27-gloria-before.webp" alt="" loading="lazy" width="460" height="616"></div>
+      <div class="half"><span class="ba-tag after">Después</span><img src="assets/t27-gloria-after.webp" alt="" loading="lazy" width="460" height="616"></div>
+    </div>
+    <div class="pv-meta">
+      <div class="stars">★★★★★</div>
+      <div class="nm">Gloria, 62 años <span>✔ Verificada</span></div>
+      <div class="qt">"A los 21 días mi marido me preguntó si había ido al dermatólogo. Solo era la cuchara, todas las noches."</div>
+    </div>
+  </div>
+  <div class="pv-note">Los resultados pueden variar de una persona a otra.</div>
+
+  <div class="price-box">
+    <div class="anchor">De <s>US$47</s></div>
+    <div class="now">US$19</div>
+    <div class="once">pago único · acceso inmediato en la app</div>
+    <!-- Hotmart 1-click aqui; por ora redireciona pro próximo passo -->
+    <a class="btn green big" id="cta-accept" href="https://pay.hotmart.com/G106805169N" style="margin-top:14px">SÍ, QUIERO EL RITUAL POR US$19 &rarr;</a>
+    <div class="secure">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" fill="#2E9E5B"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Garantía de 30 días · Compra segura
+    </div>
+  </div>
+
+  <button class="refuse" id="cta-refuse">No, gracias</button>
+
+  <!-- GARANTÍA -->
+  <div class="guarantee">
+    <div class="seal"><b>30</b><small>DÍAS</small></div>
+    <div class="gt">Garantía de 30 días</div>
+    <p><b>Prueba el ritual sin riesgo.</b> Si no sientes la diferencia, escribe un email y te devolvemos cada centavo. La guía se queda contigo.</p>
+  </div>
+
+</div>
+
+<footer class="q-footer">
+  Los resultados pueden variar. Este material tiene carácter informativo y no sustituye la orientación médica. Los testimonios reflejan experiencias individuales.
+  © Ritual Seúl 50+
+</footer>
+
+<!-- Fallback global de imagen + stubs de tracking (copiado de index.html). La etapa 9 reemplaza los stubs por el Pixel + CAPI reales. -->
+<script>
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.target.onerror = null;
+      e.target.src = 'assets/placeholder.svg';
+    }
+  }, true);
+  window.track = window.track || function () {};
+  window.getUTMQuery = window.getUTMQuery || function () { return ''; };
+  window.appendUTM = window.appendUTM || function (u) { return u; };
+</script>
+
+<!-- Timer + navegación del flujo (aceptar / rechazar). En producción, aceptar dispara el 1-click de Hotmart. -->
+<script>
+(function(){
+  /* Aceptar → checkout de Hotmart (href del botón). El regreso al embudo
+     (upsell-2.html) se configura en Hotmart, en la página de gracias del producto. */
+  var NEXT_REFUSE = 'downsell-1.html';
+
+  var secs = 600;
+  var el = document.getElementById('timer');
+  function tick(){
+    var m = Math.floor(secs/60), s = secs%60;
+    el.textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+    if(secs<=0){ clearInterval(iv); return; }
+    secs--;
+  }
+  tick();
+  var iv = setInterval(tick, 1000);
+
+  var accept = document.getElementById('cta-accept');
+  var checkout = accept.getAttribute('href');
+  accept.href = window.appendUTM(checkout);
+  accept.addEventListener('click', function(){ window.track('upsell1_accept'); });
+  document.getElementById('cta-refuse').addEventListener('click', function(e){
+    e.preventDefault(); window.track('upsell1_refuse'); window.location.href = NEXT_REFUSE;
+  });
+})();
+</script>
+
+</body>
+</html>

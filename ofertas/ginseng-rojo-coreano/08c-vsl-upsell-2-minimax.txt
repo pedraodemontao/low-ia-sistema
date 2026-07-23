@@ -1,0 +1,79 @@
+VSL UPSELL 2 — PROTOCOLO COREANO ANTI-MANCHAS (US$27)
+Script marcado para MiniMax speech-2.8-hd · ES neutro · voz Dra. Mina Seo
+
+PARAMS (iguais em TODOS os blocos, senão o timbre muda entre clipes):
+  model            speech-2.8-hd
+  language_boost   Spanish
+  speed            0.95
+  vol              1.0
+  pitch            0
+  emotion          calm   (exceção: os 2 últimos blocos → happy)
+  sample_rate      44100 · format wav · channel 1
+  text_normalization  false
+
+REGRAS: 1 request por bloco = 1 clipe de avatar. Nunca colar dois blocos juntos.
+Tag <#x#> nunca abre nem fecha o texto e nunca vem duas seguidas.
+Sound tags ([breath]) só existem no 2.8 — se cair pro 2.6/02, apagar.
+
+
+Espera. <#0.45#> No cierres esta página.
+
+Tu Pegamento Rojo ya está adentro de tu app. <#0.3#> Es tuyo, nadie te lo quita.
+
+Pero hay una cosa que el Pegamento no puede hacer solo. <#0.5#> Y prefiero decírtela yo ahora, en treinta segundos, a que la descubras sola en la semana tres, frente al espejo.
+
+Va a pasar así. <#0.35#> A los veintiún días te vas a mirar y la piel va a estar más firme. <#0.3#> El óvalo levantado, el cuello más definido. <#0.3#> Vas a estar contenta.
+
+Y en ese mismo espejo vas a ver las manchas. <#0.55#> Exactamente iguales que hoy.
+
+La del pómulo. <#0.3#> Las de las manos. <#0.3#> Las de las axilas, que te hacen dudar antes de ponerte una blusa sin mangas. <#0.35#> La de la ingle, que no le muestras a nadie.
+
+Porque el ginseng rojo firma la piel. <#0.4#> No empareja el tono. <#0.4#> Son dos cosas distintas, y necesitan dos rituales distintos.
+
+[breath] Y aquí está lo que casi nadie te explica. <#0.4#> Una mancha no es suciedad. <#0.3#> No se talla, no se borra frotando.
+
+Una mancha es un parche de melanina que tu propia piel puso encima de una micro herida inflamada. <#0.45#> El sol. <#0.25#> La depilación. <#0.25#> El roce de la ropa. <#0.25#> Los cambios hormonales de esta edad. <#0.4#> Cada uno deja una micro inflamación. <#0.35#> Y tu piel, para protegerte, la tapa con pigmento.
+
+¿Entiendes lo que significa eso? <#0.6#> Que mientras la inflamación siga ahí abajo, la mancha se va a volver a formar. <#0.4#> Aunque la aclares. <#0.3#> Aunque la tapes. <#0.3#> Aunque la ataques.
+
+Por eso fallan los aclaradores de farmacia. <#0.4#> Son ácidos fuertes, artificiales. <#0.35#> Queman la capa de arriba, la mancha parece aclarar dos semanas, y después vuelve más oscura que antes. <#0.45#> Porque el ácido inflamó todavía más la piel que ya estaba inflamada.
+
+Y ni te hablo del limón, del bicarbonato, del agua oxigenada que circulan en internet. <#0.4#> Eso no aclara. <#0.3#> Eso quema. <#0.5#> Y la piel de una mujer de más de cincuenta no perdona una quemadura.
+
+Si ya intentaste alguno de esos y la mancha volvió peor, <#0.35#> no fue culpa tuya. <#0.4#> Fue el método.
+
+[breath] Las coreanas hacen lo contrario. <#0.45#> No atacan la mancha. <#0.4#> Apagan la inflamación que la sostiene, y recién ahí aclaran.
+
+Y lo hacen con algo que tienes en la cocina. <#0.6#> Arroz fermentado.
+
+Cuando el arroz fermenta, nace solo un ácido llamado kójico. <#0.45#> El mismo que las clínicas cobran carísimo, pero en su versión natural, suave, junto con la niacinamida del propio arroz. <#0.4#> Desinflama y aclara al mismo tiempo, de a poquito, sin castigar la piel.
+
+Por eso es lento. <#0.35#> Y por eso funciona. <#0.45#> Veintiún días, cada noche, sin quemar nada.
+
+Yo armé todo eso en un solo protocolo. <#0.5#> El Protocolo Coreano Anti Manchas.
+
+Adentro está la receta exacta de la máscara de arroz, paso a paso. <#0.35#> El protocolo de veintiún días para el rostro. <#0.35#> La versión suave para las axilas, con las reglas de la depilación, que es donde casi todas se equivocan. <#0.35#> Y la versión para la ingle, la zona más delicada.
+
+Más el capítulo de protección solar, que es la mitad del resultado. <#0.4#> Y tu registro por zona, para ver el cambio semana a semana. <#0.35#> Porque es gradual, y si no lo registras, no lo notas.
+
+Una sesión de despigmentación en clínica cuesta noventa, cien dólares. <#0.4#> Y necesitas varias.
+
+Este protocolo, en tu app, para siempre, lo agregas ahora por veintisiete dólares. <#0.5#> Un solo clic. <#0.35#> No tienes que volver a digitar tu tarjeta. <#0.3#> Se suma a la compra que acabas de hacer.
+
+Y va con la misma garantía de todo lo mío. <#0.4#> Treinta días. <#0.45#> Pruébalo. <#0.35#> Si en treinta días no ves tu tono más parejo, me escribes un email y te devuelvo cada centavo. <#0.35#> La guía se queda contigo igual.
+
+El riesgo es mío. <#0.45#> No tuyo.
+
+Solo una cosa. <#0.4#> Esta página no vuelve. <#0.45#> No está a la venta suelta, no te la puedo mandar después por email al mismo precio. <#0.4#> Es ahora, o es a noventa y siete.
+
+Toca el botón verde de abajo y súmalo a tu ritual.
+
+[breath] Tu piel va a estar firme en veintiún días. <#0.45#> Que esté pareja también depende de este clic. <#0.7#> Te espero adentro.
+
+
+PÓS-PROCESSO
+  ffmpeg -f concat -safe 0 -i lista.txt -af loudnorm=I=-16:TP=-1.5:LRA=11 -ar 44100 vsl-upsell2.wav
+  (lista.txt = "file 'bloco01.wav'" por linha; 300ms de silêncio entre blocos se colar tudo)
+
+TESTAR PRIMEIRO os blocos com "pómulo", "melanina" e "kójico" — é onde o TTS erra em ES.
+Se errar, usar pronunciation_dict em vez de reescrever a palavra.

@@ -1,0 +1,222 @@
+/* ============================================================
+   Ritual Seúl 50+ · Sistema de design dos ebooks (PDF 6×9in)
+   Paleta: rojo ginseng + crema + oro. Tipografia: serif display.
+   Cada <section class="page"> = 1 página do PDF.
+   ============================================================ */
+
+:root {
+  --rojo: #8E1B1B;
+  --rojo-oscuro: #5C0F0F;
+  --rojo-profundo: #3E0A0A;
+  --crema: #F7EFE3;
+  --crema-claro: #FDF9F2;
+  --oro: #C9A227;
+  --oro-claro: #E3C56B;
+  --tinta: #2B1D16;
+  --tinta-suave: #5C4A3D;
+  --madera: #6B4A2F;
+}
+
+@page { size: 152.4mm 228.6mm; margin: 0; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-family: "Palatino", "Georgia", serif;
+  color: var(--tinta);
+  background: white;
+  font-size: 10.5pt;
+  line-height: 1.62;
+}
+
+.page {
+  width: 152.4mm;
+  height: 228.6mm;
+  page-break-after: always;
+  break-after: page;
+  overflow: hidden;
+  position: relative;
+  background: var(--crema-claro);
+  padding: 18mm 16mm 20mm 16mm;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- utilitários tipográficos ---------- */
+.sans { font-family: "Avenir Next", "Helvetica Neue", sans-serif; }
+h1, h2, h3, h4 { font-weight: 700; color: var(--rojo-oscuro); line-height: 1.15; }
+h2 { font-size: 19pt; margin-bottom: 5mm; }
+h3 { font-size: 13pt; margin: 5mm 0 2.5mm; }
+h4 { font-size: 11pt; margin: 4mm 0 1.5mm; color: var(--madera); }
+p { margin-bottom: 3.2mm; text-align: justify; }
+p.no-just { text-align: left; }
+em { color: var(--rojo); }
+strong { color: var(--rojo-oscuro); }
+ul, ol { margin: 0 0 3.5mm 6mm; }
+li { margin-bottom: 1.6mm; }
+
+.kicker {
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 8pt; font-weight: 600;
+  letter-spacing: 2.2px; text-transform: uppercase;
+  color: var(--oro); margin-bottom: 3mm;
+}
+
+/* ---------- rodapé / nº de página ---------- */
+.pfoot {
+  position: absolute; bottom: 8mm; left: 16mm; right: 16mm;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 7pt; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+.pfoot::before { content: ""; position: absolute; top: -2.5mm; left: 0; right: 0; height: 0.4pt; background: var(--oro); opacity: .55; }
+
+/* ---------- CAPA ---------- */
+.page.cover {
+  background: linear-gradient(160deg, var(--rojo) 0%, var(--rojo-oscuro) 55%, var(--rojo-profundo) 100%);
+  color: var(--crema);
+  justify-content: center; text-align: center;
+  padding: 20mm 14mm;
+}
+.cover .marca {
+  font-family: "Avenir Next", sans-serif; font-size: 9pt; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--oro-claro);
+  margin-bottom: 14mm;
+}
+.cover h1 {
+  font-size: 33pt; color: var(--crema); line-height: 1.08; margin-bottom: 7mm;
+}
+.cover h1 .oro { color: var(--oro-claro); }
+.cover .sub {
+  font-size: 12pt; font-style: italic; color: #EAD9C4;
+  max-width: 100mm; margin: 0 auto 16mm;
+}
+.cover .autor {
+  font-family: "Avenir Next", sans-serif; font-size: 10pt; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--crema);
+}
+.cover .ornamento { font-size: 16pt; color: var(--oro); margin: 8mm 0; letter-spacing: 8px; }
+.cover .sello {
+  margin: 12mm auto 0; width: 30mm; height: 30mm; border-radius: 50%;
+  border: 1.5pt solid var(--oro); display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  font-family: "Avenir Next", sans-serif; font-size: 6.5pt; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--oro-claro);
+}
+.cover .sello b { font-size: 13pt; color: var(--crema); }
+
+/* ---------- abertura de capítulo ---------- */
+.page.cap {
+  background: linear-gradient(150deg, var(--rojo) 0%, var(--rojo-oscuro) 70%);
+  color: var(--crema); justify-content: center;
+}
+.cap .num {
+  font-size: 64pt; font-weight: 700; color: var(--oro-claro);
+  line-height: 1; opacity: .9;
+}
+.cap .cap-label {
+  font-family: "Avenir Next", sans-serif; font-size: 8.5pt; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--oro-claro);
+  margin-bottom: 2mm;
+}
+.cap h2 { font-size: 25pt; color: var(--crema); margin: 5mm 0 6mm; }
+.cap .intro { font-size: 11.5pt; font-style: italic; color: #EFE0CC; max-width: 105mm; }
+.cap .linea { width: 22mm; height: 1pt; background: var(--oro); margin: 7mm 0; }
+
+/* ---------- caixas ---------- */
+.box { border-radius: 3mm; padding: 4.2mm 5.5mm; margin: 3.2mm 0; font-size: 9.8pt; }
+.box .box-t {
+  font-family: "Avenir Next", sans-serif; font-weight: 700; font-size: 8.5pt;
+  letter-spacing: 1.8px; text-transform: uppercase; display: block; margin-bottom: 2mm;
+}
+.box.tip { background: #F3E9D2; border-left: 3pt solid var(--oro); }
+.box.tip .box-t { color: var(--oro); }
+.box.alerta { background: #F7E4E0; border-left: 3pt solid var(--rojo); }
+.box.alerta .box-t { color: var(--rojo); }
+.box.nota { background: #EFE7DC; border-left: 3pt solid var(--madera); }
+.box.nota .box-t { color: var(--madera); }
+.box.mina {
+  background: var(--rojo-profundo); color: var(--crema);
+  border-radius: 3mm; font-style: italic;
+}
+.box.mina .box-t { color: var(--oro-claro); font-style: normal; }
+.box.mina p { color: var(--crema); }
+
+/* ---------- receita / card ---------- */
+.receta {
+  background: white; border: 1pt solid var(--oro);
+  border-radius: 3mm; padding: 6mm; margin: 4mm 0;
+}
+.receta .receta-t {
+  font-family: "Avenir Next", sans-serif; font-weight: 700;
+  color: var(--rojo); font-size: 11pt; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 3mm; text-align: center;
+}
+.receta table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+.receta td { padding: 1.8mm 1mm; border-bottom: 0.5pt solid #E5D9C5; vertical-align: top; }
+.receta td:last-child { text-align: right; font-weight: 700; color: var(--rojo-oscuro); white-space: nowrap; }
+
+/* ---------- passos numerados ---------- */
+.paso { display: flex; gap: 4mm; margin-bottom: 3.5mm; }
+.paso .pnum {
+  flex: 0 0 8mm; width: 8mm; height: 8mm; border-radius: 50%;
+  background: var(--rojo); color: var(--crema);
+  font-family: "Avenir Next", sans-serif; font-weight: 700; font-size: 10.5pt;
+  display: flex; align-items: center; justify-content: center;
+}
+.paso .ptxt b { display: block; color: var(--rojo-oscuro); }
+.paso .ptxt { font-size: 9.8pt; }
+
+/* ---------- página de noite (cronograma) ---------- */
+.noche-head {
+  display: flex; align-items: baseline; gap: 4mm;
+  border-bottom: 1.5pt solid var(--rojo); padding-bottom: 3mm; margin-bottom: 5mm;
+}
+.noche-head .n {
+  font-size: 38pt; font-weight: 700; color: var(--rojo); line-height: 1;
+  font-family: "Palatino", serif;
+}
+.noche-head .lbl { font-family: "Avenir Next", sans-serif; font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase; color: var(--oro); }
+.noche-head .t { font-size: 14pt; font-weight: 700; color: var(--rojo-oscuro); }
+.checklist { list-style: none; margin-left: 0; }
+.checklist li { padding-left: 7mm; position: relative; margin-bottom: 2.2mm; font-size: 9.8pt; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 1.2mm;
+  width: 3.6mm; height: 3.6mm; border: 1.2pt solid var(--rojo); border-radius: 0.8mm;
+}
+
+/* ---------- FAQ ---------- */
+.faq { margin-bottom: 4mm; }
+.faq .q { font-weight: 700; color: var(--rojo-oscuro); margin-bottom: 1mm; }
+.faq .q::before { content: "P. "; color: var(--oro); font-family: "Avenir Next", sans-serif; }
+.faq .a { font-size: 9.8pt; }
+.faq .a::before { content: "R. "; color: var(--rojo); font-weight: 700; font-family: "Avenir Next", sans-serif; }
+
+/* ---------- sumário ---------- */
+.toc { list-style: none; margin: 3mm 0 0 0; }
+.toc li {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 1.5mm 0; border-bottom: 0.5pt dotted var(--oro);
+  font-size: 9.8pt;
+}
+.toc .tnum { font-family: "Avenir Next", sans-serif; font-weight: 700; color: var(--rojo); margin-right: 3mm; }
+.toc .tp { font-family: "Avenir Next", sans-serif; font-size: 9pt; color: var(--tinta-suave); }
+
+/* ---------- diagramas SVG ---------- */
+.diagrama { margin: 4mm auto; text-align: center; }
+.diagrama svg { max-width: 100%; }
+.diagrama .leyenda {
+  font-family: "Avenir Next", sans-serif; font-size: 8pt;
+  color: var(--tinta-suave); margin-top: 2mm; font-style: italic;
+}
+
+/* ---------- página de diário/registro ---------- */
+.reg-linea { border-bottom: 0.7pt solid #C9B99F; height: 8mm; }
+.reg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 4mm; }
+.reg-cel { border: 0.7pt solid var(--oro); border-radius: 2mm; padding: 3mm; min-height: 26mm; }
+.reg-cel .rt { font-family: "Avenir Next", sans-serif; font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: var(--oro); margin-bottom: 2mm; }
+
+/* ---------- separador / cierre ---------- */
+.orn { text-align: center; color: var(--oro); font-size: 13pt; letter-spacing: 6px; margin: 5mm 0; }
+.firma { font-style: italic; text-align: right; color: var(--rojo-oscuro); font-size: 11pt; margin-top: 5mm; }

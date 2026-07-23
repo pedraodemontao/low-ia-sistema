@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; }
+  body { width:512px; height:512px; overflow:hidden; }
+  .ico {
+    width:512px; height:512px;
+    background: linear-gradient(155deg, #8E1B1B 0%, #5C0F0F 60%, #3E0A0A 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:"Palatino","Georgia",serif; color:#F7EFE3;
+  }
+  /* padding maior no maskable: Android recorta as bordas em círculo */
+  .ico.mask { padding: 90px; }
+  .gota { font-size:150px; line-height:1; margin-bottom:18px; }
+  .txt { font-size:74px; font-weight:700; letter-spacing:-1px; color:#E3C56B; line-height:1; }
+  .sub { font-size:32px; letter-spacing:6px; margin-top:14px; color:#EAD9C4; font-family:-apple-system,sans-serif; }
+  .ico.mask .gota { font-size:118px; }
+  .ico.mask .txt { font-size:60px; }
+  .ico.mask .sub { font-size:25px; letter-spacing:4px; }
+</style>
+</head>
+<body>
+<div class="ico">
+  <div class="gota">❋</div>
+  <div class="txt">Ritual</div>
+  <div class="sub">SEÚL 50+</div>
+</div>
+</body>
+</html>

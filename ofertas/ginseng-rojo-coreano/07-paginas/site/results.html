@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Ritual del Pegamento Rojo Coreano · Resultado Personalizado</title>
+<meta name="robots" content="noindex">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/quiz.css">
+<style>
+  /* ============ SALES PAGE v3 · estructura del campeon + diseno clean ============ */
+  .sp{max-width:560px;margin:0 auto;padding:0 20px 40px}
+  .sp h2{font-size:21px;font-weight:900;line-height:1.22;margin:34px 0 12px;text-align:center}
+  .sp h3{font-size:15.5px;font-weight:800;margin:18px 0 8px}
+  .sp p{font-size:15px;line-height:1.65;color:var(--ink-soft);margin-bottom:12px}
+  .sp p b{color:var(--ink)}
+  .ico{width:18px;height:18px;vertical-align:-3.5px;margin-right:5px}
+  .topbar-fixed{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1.5px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;margin:0 -20px 0}
+  .tb-timer{font-size:12px;font-weight:700;color:var(--ink-soft);line-height:1.3}
+  .tb-timer b{display:block;font-size:19px;font-weight:900;color:var(--ink);letter-spacing:.5px}
+  .tb-cta{background:var(--green);color:#fff;font-weight:800;font-size:13.5px;padding:11px 18px;border-radius:12px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 12px rgba(46,158,91,.3)}
+  .recap{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:13px;margin-bottom:8px}
+  .recap-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:4px}
+  .rc-chip{background:var(--cream);border:1.5px solid var(--line);border-radius:10px;padding:7px 10px}
+  .rc-chip.wide{grid-column:1/-1}
+  .rc-lab{font-size:11.5px;font-weight:800;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px}
+  .rc-val{font-size:12px;font-weight:800;margin-top:1px;line-height:1.3}
+  .rc-val.bad{color:var(--red)}
+  .shield-banner{text-align:center;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-soft);margin:11px 0 4px}
+  .shield-banner b{font-size:13px;letter-spacing:.4px;color:var(--red);margin-left:3px}
+  .slider-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2px}
+  .sl-col-title{font-size:12px;font-weight:900;text-align:center;letter-spacing:1px;margin-bottom:7px;text-transform:uppercase}
+  .sl-row{margin-bottom:7px}
+  .sl-lab{font-size:12px;font-weight:700;color:var(--ink-soft);margin-bottom:3px;display:flex;justify-content:space-between}
+  .sl-lab b{font-size:12px}
+  .sl-track{position:relative;height:6px;border-radius:3px;background:linear-gradient(90deg,#D64545,#E8A13C,#2E9E5B)}
+  .sl-dot{position:absolute;top:-4.5px;width:15px;height:15px;border-radius:50%;background:#fff;border:3.5px solid var(--red);transform:translateX(-50%)}
+  .sl-dot.green{border-color:var(--green)}
+  .profile-badge{display:block;width:fit-content;margin:22px auto 10px;background:var(--blueberry);color:#fff;font-size:11.5px;font-weight:900;letter-spacing:1.2px;padding:5px 13px;border-radius:8px;text-transform:uppercase}
+  .price-box .old{font-size:13.5px;color:var(--ink-soft);text-decoration:line-through;font-weight:700}
+  .price-box .new{font-size:44px;font-weight:900;color:var(--green);line-height:1.1}
+  .price-box .pp{font-size:11.5px;color:var(--ink-soft);font-weight:700;margin-top:2px}
+  .perday{font-size:12px;color:var(--ink-soft);font-weight:700;margin-top:4px}
+  .sp .btn{font-size:15.5px}
+  .cta-t{font-weight:900;opacity:.92}
+  .live-proof{display:flex;align-items:center;gap:7px;justify-content:center;font-size:11.5px;font-weight:700;color:var(--ink-soft);margin:10px 0 2px}
+  .live-proof .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);animation:lppulse 1.6s infinite}
+  @keyframes lppulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .pay-badges{text-align:center;font-size:12px;font-weight:800;color:var(--ink-soft);letter-spacing:.6px;margin-top:12px}
+  .timeline{border-left:3px solid var(--blueberry-light);margin:14px 0 8px 8px;padding-left:16px}
+  .tl-item{margin-bottom:14px}
+  .tl-item .wk{font-size:12px;font-weight:900;color:var(--blueberry-deep);text-transform:uppercase;letter-spacing:1px}
+  .tl-item .tx{font-size:13.5px;line-height:1.55;color:var(--ink)}
+  .goal-box{background:var(--blueberry-bg);border:1.5px solid var(--blueberry-light);border-radius:12px;padding:13px;font-size:13.5px;font-weight:800;text-align:center;color:var(--blueberry-deep);margin-bottom:8px}
+  .glue-card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden;margin:14px 0}
+  .glue-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .glue-card .gc-meta{padding:12px 14px}
+  .gc-kicker{font-size:11.5px;font-weight:900;letter-spacing:1px;color:var(--blueberry-deep);text-transform:uppercase}
+  .gc-t{font-size:14px;font-weight:900;margin:3px 0 2px}
+  .gc-s{font-size:12px;color:var(--ink-soft);line-height:1.5}
+  .app-list{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+  .app-item{display:flex;gap:11px;background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:13px 14px;align-items:flex-start}
+  .app-item .num{width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:var(--blueberry);color:#fff;font-size:12.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .app-item .tx{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+  .app-item .tx b{display:block;font-size:15.5px;color:var(--ink);margin-bottom:3px;line-height:1.25}
+  .phones{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 14px;-webkit-overflow-scrolling:touch}
+  .phone-mk{flex:0 0 200px;background:#1E2030;border-radius:26px;padding:8px;box-shadow:0 14px 28px rgba(30,32,48,.25)}
+  .phone-mk .scr{background:var(--cream);border-radius:19px;padding:13px 11px;min-height:300px;display:flex;flex-direction:column}
+  .phone-mk .app-shot{width:100%;height:306px;object-fit:cover;object-position:center top;border-radius:19px;display:block}
+  .scr .app-head{font-size:11px;font-weight:900;letter-spacing:1px;color:var(--blueberry-deep);text-transform:uppercase;margin-bottom:2px}
+  .scr .app-title{font-size:13.5px;font-weight:900;margin-bottom:9px;line-height:1.2}
+  .scr .row{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 9px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .scr .row span:last-child{color:var(--blueberry-deep);font-weight:900}
+  .scr .play{width:54px;height:54px;border-radius:50%;background:var(--blueberry);margin:14px auto;display:flex;align-items:center;justify-content:center}
+  .scr .play svg{margin-left:4px}
+  .scr .vid-lab{text-align:center;font-size:12px;font-weight:800}
+  .scr .vid-sub{text-align:center;font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-top:2px}
+  .scr .bar-row{margin-bottom:8px}
+  .scr .bar-lab{font-size:11.5px;font-weight:800;display:flex;justify-content:space-between;margin-bottom:3px}
+  .scr .bar-tr{height:7px;border-radius:4px;background:#EBE7DD;overflow:hidden}
+  .scr .bar-fl{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blueberry-light),var(--blueberry-deep))}
+  .scr .btn-mk{margin-top:auto;background:var(--green);color:#fff;text-align:center;font-size:12px;font-weight:900;border-radius:9px;padding:9px}
+  .scr .streak{text-align:center;font-size:11.5px;color:var(--ink-soft);font-weight:700;margin-top:6px}
+  .guarantee{background:var(--card);border:2.5px dashed var(--green);border-radius:16px;padding:18px;margin:18px 0;text-align:center}
+  .guarantee .gt{font-size:15.5px;font-weight:900;margin:8px 0 8px}
+  .guarantee p{font-size:12.5px}
+  .g-steps{text-align:left;margin:12px 0 6px;display:flex;flex-direction:column;gap:9px}
+  .g-step{display:flex;gap:10px;font-size:12.5px;line-height:1.5;color:var(--ink);align-items:flex-start}
+  .g-step .n{width:22px;height:22px;flex:0 0 22px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .seal{display:flex;align-items:center;gap:11px;background:var(--card);border:1.5px solid var(--gold);border-radius:12px;padding:12px 14px;font-size:12.5px;line-height:1.5;margin:10px 0;text-align:left}
+  .carousel{display:flex;width:100%;margin:10px 0 4px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .carousel::-webkit-scrollbar{display:none}
+  .carousel .cslide{flex:0 0 100%;scroll-snap-align:center;animation:fadeUp .4s ease}
+  .swipe-hint{text-align:center;font-size:12px;font-weight:700;color:var(--ink-soft);margin-top:2px;opacity:.8}
+  .swipe-hint::before{content:"\27F5 ";} .swipe-hint::after{content:" \27F6";}
+  .car-dots{display:flex;gap:6px;justify-content:center;margin:8px 0 0}
+  .car-dots .dot{width:7px;height:7px;border-radius:50%;background:#D9D4C8;cursor:pointer}
+  .car-dots .dot.active{background:var(--blueberry);width:18px;border-radius:4px;transition:width .2s}
+  .car-title{text-align:center;font-size:12px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:var(--blueberry-deep);margin:18px 0 2px}
+  .bonus{display:flex;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:11px;margin-bottom:10px;align-items:center}
+  .bonus .cover{width:58px;height:74px;flex:0 0 58px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:5px;box-shadow:0 5px 12px rgba(0,0,0,.18)}
+  .bonus .btx{flex:1;font-size:12px;line-height:1.45;color:var(--ink-soft)}
+  .bonus .btx b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:2px}
+  .bonus .bv{font-weight:900;color:var(--gold);white-space:nowrap;font-size:13px}
+  .faq-item{border:1.5px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden;background:var(--card)}
+  .faq-item summary{padding:13px 15px;cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;position:relative}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";margin-left:auto;flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--blueberry-bg);color:var(--blueberry-deep);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;line-height:1}
+  .faq-item[open] summary::after{content:"\2212";background:var(--blueberry);color:#fff}
+  .fq-av{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:linear-gradient(135deg,var(--blueberry-light),var(--blueberry-deep));color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .fq-av img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+  .fq-q{font-size:15px;line-height:1.5;font-weight:600;color:var(--ink)}
+  .fq-q .fq-n{display:block;font-size:12px;font-weight:800;color:var(--ink-soft);margin-bottom:2px}
+  .faq-item .fa{padding:0 15px 13px 55px;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+  .faq-item .fa b{color:var(--blueberry-deep)}
+  .two-women{background:linear-gradient(160deg,#FBEEEC,#FAF8F4);border:1.5px solid var(--blueberry-light);border-radius:16px;padding:18px;margin:18px 0;font-size:13.5px;line-height:1.65;color:var(--ink)}
+  .ps{background:var(--card);border-left:4px solid var(--blueberry);border-radius:0 12px 12px 0;padding:14px 16px;font-size:13.5px;line-height:1.6;margin:18px 0}
+  .wheel-applied{background:var(--green);color:#fff;font-size:12px;font-weight:800;border-radius:10px;padding:8px 12px;margin:0 0 10px;text-align:center}
+  .discount-strike{text-decoration:line-through;color:var(--ink-soft);font-weight:700}
+  .testi{margin:0}
+  .testi .ba-meta{padding:11px 13px}
+  /* ===== SEOUL EDITORIAL overrides ===== */
+  :root{--porcelain:#FBF9F5;--gold2:#C19A3D;--gold-soft:#E8D9B0;--navy:#7A2A24;--navy-deep:#4A1712;--forest:#14543A;--forest-deep:#0D3A28}
+  body{background:var(--porcelain)}
+  .sp h2{font-family:'Playfair Display',serif;font-size:25px;font-weight:800;letter-spacing:0}
+  .sp h2 em{font-style:italic;color:var(--blueberry-deep)}
+  .car-title{color:var(--gold2);letter-spacing:2.2px}
+  .car-title::before{content:"\B7 ";color:var(--gold-soft)}
+  .car-title::after{content:" \B7";color:var(--gold-soft)}
+  .topbar-fixed{background:rgba(251,249,245,.98);backdrop-filter:blur(8px);border-bottom:1px solid var(--gold-soft);padding:13px 16px}
+  .tb-timer{font-size:11.5px;font-weight:800;letter-spacing:1.4px;color:var(--gold2);text-transform:uppercase}
+  .tb-timer b{color:var(--ink);font-size:24px;letter-spacing:.5px}
+  .tb-cta{background:linear-gradient(135deg,#2FB673,#1F8A56);border-radius:30px;font-size:15px;font-weight:900;padding:14px 24px;box-shadow:0 8px 20px rgba(31,138,86,.45);animation:ctapulse 2.2s ease-in-out infinite}
+  .recap,.glue-card,.app-item,.bonus,.faq-item,.seal,.ba-card.testi{box-shadow:0 14px 30px rgba(28,30,46,.08)}
+  .recap{border-top:4px solid var(--blueberry)}
+  .recap-grid .rc-chip:nth-of-type(1){background:var(--blueberry-bg);border-color:transparent}
+  .recap-grid .rc-chip:nth-of-type(2){background:#FBF3E2;border-color:transparent}
+  .recap-grid .rc-chip:nth-of-type(3){background:#FCEDED;border-color:transparent}
+  .recap-grid .rc-chip:nth-of-type(4){background:#EDF7F1;border-color:transparent}
+  .profile-badge{background:#F7EFD9;border:1px solid var(--gold-soft);color:#7A5E16;letter-spacing:1.8px}
+  .price-box{background:#fff;border:2px solid var(--gold-soft);border-radius:18px;position:relative;box-shadow:0 18px 40px rgba(28,30,46,.10);padding:20px 18px;text-align:center;margin:10px 0 14px}
+  .price-box::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:4px;border-radius:0 0 4px 4px;background:var(--gold2)}
+  .price-box .old{color:var(--ink-soft);font-size:12px}
+  .price-box .new{color:var(--ink);font-weight:900;letter-spacing:-1.5px;font-size:46px;line-height:1;margin-top:2px}
+  .price-box .new .per{font-size:18px;font-weight:800;color:var(--ink-soft);letter-spacing:0;margin-left:2px}
+  .price-box .pp{color:var(--ink-soft);font-size:12.5px;margin-top:7px}
+  .price-box .pp .price-cta{color:var(--ink);font-weight:900}
+  .price-box .price-micro{font-size:12px;color:var(--ink-soft);font-weight:700;margin-top:10px}
+  .price-box .price-micro svg{width:13px;height:13px;vertical-align:-2px}
+  .sp .btn.green.in-card{margin:15px 0 0}
+  .sp > .btn.green{margin:22px 0 8px}
+  .sp .btn.green{background:linear-gradient(135deg,#2FB673,#1F8A56);box-shadow:0 12px 26px rgba(31,138,86,.4);border-radius:14px;animation:ctapulse 2.2s ease-in-out infinite}
+  @keyframes ctapulse{0%,100%{transform:scale(1);box-shadow:0 12px 26px rgba(31,138,86,.4)}50%{transform:scale(1.02);box-shadow:0 16px 38px rgba(31,138,86,.55)}}
+  .pd-cta{font-weight:900}
+  .plan-card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:8px 0 6px;box-shadow:0 14px 30px rgba(28,30,46,.08)}
+  .plan-points{display:flex;flex-direction:column;gap:11px}
+  .pp-item{display:flex;gap:11px;align-items:flex-start}
+  .pp-ic{width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:var(--blueberry-bg);display:flex;align-items:center;justify-content:center}
+  .pp-ic svg{width:19px;height:19px}
+  .pp-item .pt > b{display:block;font-size:14px;color:var(--ink);margin-bottom:3px;line-height:1.3}
+  .pp-item .pt span{font-size:12.5px;line-height:1.55;color:var(--ink-soft)}
+  .pp-item .pt span b{color:var(--ink);font-weight:800}
+  .guarantee{background:linear-gradient(165deg,var(--forest),var(--forest-deep));border:none;color:#fff;box-shadow:0 22px 44px rgba(13,58,40,.35)}
+  .guarantee .gt{font-family:'Playfair Display',serif;font-size:20px}
+  .guarantee p{color:#CBE7D6}
+  .guarantee p b{color:#fff}
+  .guarantee .g-step{color:#E2F2E9}
+  .guarantee .g-step .n{background:var(--gold2);color:#3A2D0D}
+  .gold-seal{width:64px;height:64px;margin:0 auto 4px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#E8D9B0,#C19A3D 60%,#8F6F25);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3A2D0D;border:2.5px solid #F3E8C8;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+  .gold-seal b{font-size:18px;font-weight:900;line-height:1}
+  .gold-seal small{font-size:6.5px;font-weight:900;letter-spacing:1px}
+  .bonus .cover.img{padding:0;border:none;overflow:hidden}
+  .bonus .cover.img img{width:100%;height:100%;object-fit:cover}
+  .bonus .bv{color:var(--green);background:var(--green-bg);border-radius:7px;padding:4px 8px;font-size:12px}
+  .faq-item{border-left:4px solid var(--gold2)}
+  .fq-av{background:linear-gradient(135deg,#F2ADA4,#B0392E)}
+  .two-women{background:linear-gradient(160deg,#F7F3E8,#FBF9F5);border:1px solid var(--gold-soft)}
+  .tl-item .wk{color:var(--gold2)}
+  .mech2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 10px}
+  .m2-card{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 13px 14px;box-shadow:0 14px 30px rgba(28,30,46,.08)}
+  .m2-tag{display:inline-block;color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;border-radius:7px;padding:4px 9px;margin-bottom:8px}
+  .m2-t{font-family:'Playfair Display',serif;font-size:15.5px;font-weight:800;line-height:1.2;margin-bottom:5px}
+  .m2-s{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+  .m2-s b{color:var(--ink)}
+  .m2-puv{background:linear-gradient(165deg,var(--navy),var(--navy-deep));color:#ECC8C4;border-radius:14px;padding:14px 16px;font-size:12.5px;line-height:1.6;text-align:center;margin-bottom:8px;box-shadow:0 14px 30px rgba(122,42,36,.25)}
+  .m2-puv b{color:#fff}
+  .tw-img{border-radius:14px;overflow:hidden;margin-bottom:12px}
+  .tw-img img{width:100%;display:block;aspect-ratio:4/3.4;object-fit:cover}
+  .g-photo{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 20%;margin:10px auto 2px;display:block;border:3px solid rgba(243,232,200,.7);box-shadow:0 8px 18px rgba(0,0,0,.3)}
+</style>
+<script src="js/pixel.js?v=2"></script>
+</head>
+<body>
+
+<div class="sp">
+
+  <!-- BARRA FIJA -->
+  <div class="topbar-fixed">
+    <div class="tb-timer">Tu ritual está reservado por:<b id="timer">14:59</b></div>
+    <a class="tb-cta" id="cta-top" href="#price-1">Quiero mi ritual &rarr;</a>
+  </div>
+
+  <!-- ENTREGA -->
+  <div class="delivered" style="background:var(--green-bg);border:2px solid #BFE5CD;border-radius:14px;padding:15px;font-size:13.5px;line-height:1.55;margin-top:14px">
+    <svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#2E9E5B"/><path d="M7 12.5l3.2 3L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span id="sl-name">Amiga</span>, tu <b style="color:var(--green)">Ritual del Pegamento Rojo Coreano ya está listo!</b><br>
+    Fue calibrado para tu perfil de piel y se generó una sola vez. No salgas de esta página.
+  </div>
+
+  <!-- ANTES / DESPUES DE PAULA (apertura) -->
+  <div class="ba-card testi" style="margin:16px 0 14px">
+    <div class="ba-pair">
+      <div class="half"><span class="ba-tag">Antes</span><img src="assets/p1-05-paula-before.webp" alt="Antes" width="460" height="616"></div>
+      <div class="half"><span class="ba-tag after">Después</span><img src="assets/p1-05-paula-after.webp" alt="Después" width="460" height="616"></div>
+    </div>
+    <div class="ba-meta">
+      <div class="stars">★★★★★</div>
+      <div class="ba-name">Paula, 61 <span style="color:var(--green);font-size:12px;font-weight:800">✔ Verificada</span></div>
+      <div class="ba-quote">"Le tenía miedo al sol por el retinol. Ahora hago un ritual coreano de 2 minutos por la noche y mi piel se renueva sola, sin descamarse, sin esconderme."</div>
+    </div>
+  </div>
+
+  <!-- RECAP REAL -->
+  <div class="recap">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--ink-soft);margin-bottom:10px">Tu resumen del test · Evaluación de la Dra. Mina</div>
+    <div class="recap-grid">
+      <div class="rc-chip"><div class="rc-lab">Edad</div><div class="rc-val" id="rc-age">-</div></div>
+      <div class="rc-chip"><div class="rc-lab">Tu objetivo</div><div class="rc-val" id="rc-goal">-</div></div>
+      <div class="rc-chip wide"><div class="rc-lab">Principales molestias que marcaste</div><div class="rc-val" id="rc-pains">-</div></div>
+      <div class="rc-chip"><div class="rc-lab">Ya probaste</div><div class="rc-val" id="rc-tried">-</div></div>
+      <div class="rc-chip"><div class="rc-lab">Ambiente diario</div><div class="rc-val" id="rc-env">-</div></div>
+    </div>
+    <div class="shield-banner">Estado del Escudo de la Piel: <b id="rc-shield">MUY DEBILITADO</b></div>
+    <div class="slider-grid">
+      <div>
+        <div class="sl-col-title" style="color:var(--red)">Hoy</div>
+        <div class="sl-row"><div class="sl-lab"><span>Hidratación</span><b style="color:var(--red)">BAJA</b></div><div class="sl-track"><span class="sl-dot" style="left:13%"></span></div></div>
+        <div class="sl-row"><div class="sl-lab"><span>Renovación de colágeno</span><b style="color:var(--red)">BAJA</b></div><div class="sl-track"><span class="sl-dot" style="left:10%"></span></div></div>
+        <div class="sl-row"><div class="sl-lab"><span>Firmeza</span><b style="color:var(--red)">BAJA</b></div><div class="sl-track"><span class="sl-dot" style="left:17%"></span></div></div>
+      </div>
+      <div>
+        <div class="sl-col-title" style="color:var(--green)">Día 21 · Meta</div>
+        <div class="sl-row"><div class="sl-lab"><span>Hidratación</span><b style="color:var(--green)">ALTA</b></div><div class="sl-track"><span class="sl-dot green" style="left:88%"></span></div></div>
+        <div class="sl-row"><div class="sl-lab"><span>Renovación de colágeno</span><b style="color:var(--green)">ALTA</b></div><div class="sl-track"><span class="sl-dot green" style="left:85%"></span></div></div>
+        <div class="sl-row"><div class="sl-lab"><span>Firmeza</span><b style="color:var(--green)">ALTA</b></div><div class="sl-track"><span class="sl-dot green" style="left:90%"></span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE "PLAN LISTO" -->
+  <h2>¡Tu plan de <em>Piel Coreana</em> está listo!</h2>
+  <div class="plan-card">
+    <div class="plan-points">
+      <div class="pp-item"><span class="pp-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 4 6 6 6 10a6 6 0 11-12 0c0-4 3-6 6-10z" stroke="#DA5749" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="pt"><b>Tu Pegamento Rojo Coreano personalizado</b><span>Un plan con la <b>dosis exacta</b> de cada ingrediente del pegamento, calibrada para las características de tu rostro, no una receta igual para todas.</span></span></div>
+      <div class="pp-item"><span class="pp-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z" stroke="#DA5749" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="pt"><b>Tu rutina de Tai Chi facial coreano</b><span>Para hacer <b>mientras aplicas el pegamento</b>, diseñada para acelerar los resultados en las zonas que marcaste: <b id="plan-zones">tus zonas objetivo</b>.</span></span></div>
+    </div>
+  </div>
+
+  <!-- OFERTA ANTICIPADA -->
+  <span class="profile-badge" id="profile-badge">Calibrado para tu perfil de piel</span>
+  <div class="price-box" id="price-1">
+    <div class="old">Valor total: US$97</div>
+    <div class="new"><b class="price-cta">US$10</b><span class="per">pago único</span></div>
+    <div class="pp">Sale a <b class="pd-val">US$0,48</b> por día en tu ritual de 21 noches</div>
+    <a class="btn green in-card" id="cta-0" href="#">Empezar mi ritual hoy &rarr;</a>
+    <div class="price-micro">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" fill="#2E9E5B"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Garantía de 30 días &nbsp;·&nbsp;
+      <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2.5" fill="#6B7080"/><path d="M8 10V7a4 4 0 118 0v3" stroke="#6B7080" stroke-width="2.4" fill="none"/></svg>Compra segura
+    </div>
+  </div>
+  <div class="live-proof"><span class="pulse"></span><span><b>214 mujeres</b> empezaron el ritual en las últimas 24 horas</span></div>
+
+  <!-- PROYECCION 21 DIAS -->
+  <h2>Cómo serán tus próximos 21 días</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="wk">Semana 1 · El escudo despierta</div><div class="tx">La hidratación profunda vuelve primero. Al día 4 o 5, el <b>brillo</b> es lo que las mujeres notan en el espejo, antes de que cualquier otra persona lo note.</div></div>
+    <div class="tl-item"><div class="wk">Semana 2 · Aparece el lifting</div><div class="tx">Las líneas finas empiezan a suavizarse y el <b>contorno empieza a levantar</b>: es el <b>tai chi de 3 dedos</b> trabajando el músculo, mientras el pegamento reconstruye el colágeno por debajo.</div></div>
+    <div class="tl-item"><div class="wk">Semana 3 · La hora del espejo</div><div class="tx">La firmeza se consolida. Es la semana que las mujeres describen como <b>"recuperar mi rostro"</b>, y el ritual ya se volvió un hábito que mantienes.</div></div>
+  </div>
+  <div class="goal-box" id="sl-goal">Resultado esperado: tu meta de 10 años más joven</div>
+  <p style="text-align:center;font-size:12px;font-style:italic;margin:-2px 0 0">"Mi contorno levantó, mi piel brilla, en 3 semanas." <b style="font-style:normal">Karen, 57</b> <span style="color:var(--green);font-size:12px;font-weight:800">✔ Verificada</span></p>
+
+  <!-- PRUEBA DE LOS 21 DIAS -->
+  <div class="car-title">Ellas también contaron los días</div>
+  <div class="carousel" id="car-fast"></div>
+
+  <!-- TESTIMONIO DE CELEBRIDAD -->
+  <div class="car-title">Hasta en Hollywood</div>
+  <div class="bi-card" style="margin:10px 0 4px">
+    <img src="assets/t2b-celebrity.webp" alt="" width="781" height="1000">
+    <div class="bi-cap">"Después de descubrir que era <b>alérgica al bótox</b>, este pegamento rojo coreano salvó mi carrera de actriz después de los 50… parece que <b>volví en el tiempo</b>."</div>
+  </div>
+
+  <!-- LA DUPLA QUE SE POTENCIA -->
+  <h2>Por qué el pegamento y el masaje fueron <em>hechos</em> el uno para el otro</h2>
+  <div class="mech2">
+    <div class="m2-card">
+      <div class="m2-tag" style="background:var(--blueberry)">El Pegamento</div>
+      <div class="m2-t">Alimenta tu piel</div>
+      <div class="m2-s">Despierta tu piel para que vuelva a <b>retener agua y firmarse sola</b>, noche tras noche, mientras duermes.</div>
+    </div>
+    <div class="m2-card">
+      <div class="m2-tag" style="background:var(--gold2)">El Masaje</div>
+      <div class="m2-t">Empuja más hondo y levanta</div>
+      <div class="m2-s">Los movimientos suaves de 3 dedos <b>activan la circulación, así tu piel absorbe más del pegamento</b>, y los músculos por debajo se firman. Es el lifting.</div>
+    </div>
+  </div>
+  <div class="m2-puv">Esto es lo que nadie te contó: <b>tu piel se apoya sobre el músculo del rostro.</b><br>Solo firmar la piel no basta: el músculo sigue cayendo por debajo, y por eso toda crema falla.<br>Trabajar solo el músculo tampoco: la piel levanta pero sigue seca (ahí se queda el yoga facial).<br><b>El secreto coreano es hacer los dos a la vez: el Pegamento nutre la piel mientras el tai chi levanta el músculo. En 2 minutos por noche.</b></div>
+
+  <div class="glue-card">
+    <img src="assets/op-02-mina-app-v2.webp" alt="Dra. Mina con el App Ritual Seúl" loading="lazy" style="aspect-ratio:5/4;object-position:center 18%" width="900" height="675">
+    <div class="gc-meta">
+      <div class="gc-kicker">Las dos partes, calibradas para ti</div>
+      <div class="gc-t">Por eso creé el App Ritual Seúl</div>
+      <div class="gc-s">Guarda tu calibración y te guía por las dos partes del ritual, noche tras noche:</div>
+    </div>
+  </div>
+  <div class="app-list">
+    <div class="app-item"><span class="num">1</span><div class="tx"><b>La receta del Pegamento Rojo en la proporción exacta</b>Calibrada para TU piel, medida al gramo, paso a paso, lista en 2 minutos.</div></div>
+    <div class="app-item"><span class="num">2</span><div class="tx"><b>El Tai Chi facial coreano de 3 dedos</b>El masaje de 2 minutos que las mujeres describen como un "efecto bótox natural", mapeado a las zonas exactas que TÚ marcaste.</div></div>
+    <div class="app-item"><span class="num">3</span><div class="tx"><b>La recalibración semanal</b>Tu piel cambia de semana a semana, tu receta la acompaña, así la semana 3 trabaja tanto como la noche 1.</div></div>
+    <div class="app-item"><span class="num">4</span><div class="tx"><b>La secuencia matinal "Piel de Cristal"</b>Cómo las coreanas fijan ese acabado luminoso de adentro hacia afuera antes de las 8 de la mañana.</div></div>
+    <div class="app-item"><span class="num">5</span><div class="tx"><b>El Ritual del Sueño Coreano</b>Tu colágeno se reconstruye de noche, esto hace que cada hora de sueño trabaje por tu rostro.</div></div>
+  </div>
+
+  <!-- PANTALLAS DE LA APP -->
+  <h2>Por dentro de la app: tu ritual, noche tras noche</h2>
+  <div class="phones">
+    <div class="phone-mk"><img class="app-shot" src="assets/app-shot-formula.webp" alt="Tu fórmula personalizada dentro de la app" loading="lazy"></div>
+    <div class="phone-mk"><img class="app-shot" src="assets/app-shot-ritual.webp" alt="El ritual guiado, paso a paso, en la app" loading="lazy"></div>
+    <div class="phone-mk"><img class="app-shot" src="assets/app-shot-noche.webp" alt="Tu ritual de cada noche y tu progreso, en la app" loading="lazy"></div>
+  </div>
+
+  <!-- CTA ENTRE APP Y GARANTIA -->
+  <a class="btn green" id="cta-4" href="#">Quiero el ritual completo &nbsp;·&nbsp; <span class="pd-cta">US$0,48/día</span> &rarr;</a>
+  <div class="micro">Solo <b class="price-cta">US$10</b> pago único · Sin suscripción · Acceso inmediato</div>
+
+  <!-- GARANTIA -->
+  <div class="guarantee">
+    <div class="gold-seal"><b>30</b><small>DÍAS</small></div>
+    <div class="gt">La Garantía del Reto de 21 Días</div>
+    <p><b>Recibe el 100% de tu dinero de vuelta</b> si tu espejo no cambia después de seguir el ritual. Tienes <b>30 días completos</b>.</p>
+    <div class="g-steps">
+      <div class="g-step"><span class="n">1</span><span><b>Haz el ritual de 2 minutos</b> cada noche por 21 días. La vida se atraviesa, por eso tienes 30 días para completar tus 21.</span></div>
+      <div class="g-step"><span class="n">2</span><span><b>¿No viste tu piel cambiar?</b> Envía un email, sin formulario, sin preguntas, sin tener que "probar" nada.</span></div>
+      <div class="g-step"><span class="n">3</span><span><b>Recibe cada centavo de vuelta.</b> Reembolso del 100%, y los bonos siguen siendo tuyos.</span></div>
+    </div>
+    <img class="g-photo" src="assets/op-09-mina-guarantee-v2.webp" alt="Dra. Mina Seo" loading="lazy" width="800" height="1067">
+    <p><b>La industria de la belleza nunca te reembolsó por una crema que falló. Yo sí.</b><br>Dra. Mina Seo</p>
+  </div>
+
+  <!-- PRUEBA + CARRUSEL A -->
+  <h2>Más de 37 mil mujeres ya reactivaron el escudo</h2>
+  <div class="seal">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" style="flex:0 0 34px"><circle cx="12" cy="12" r="11" fill="#C9A227"/><path d="M12 4l1.8 3.8 4.2.5-3.1 2.9.8 4.1L12 13.2l-3.7 2.1.8-4.1L6 8.3l4.2-.5L12 4z" fill="#fff"/></svg>
+    <span>Respaldado por un estudio de la <b>Universidad Nacional de Seúl</b> con <b>4.500 mujeres</b>: el escudo, no la genética, separó la piel envejecida de la joven.</span>
+  </div>
+  <div class="car-title">Resultados verificados · semana 3 del ritual</div>
+  <div class="carousel" id="car-a"></div>
+
+  <!-- BONOS -->
+  <h2>Incluidos gratis cuando empiezas hoy</h2>
+  <div class="bonus">
+    <div class="cover img"><img src="assets/op-03-bonus-antispot.webp" alt="Protocolo Coreano Anti-Manchas" loading="lazy" width="747" height="1000"></div>
+    <div class="btx"><b>Protocolo Coreano Anti-Manchas</b>Las manchas (melasma, manchas de edad y de sol) son lo que más delata la edad. El paso a paso coreano para ayudar a aclarar y unificar el tono, incluso en las manchas antiguas.</div>
+    <div class="bv">US$29</div>
+  </div>
+  <div class="bonus">
+    <div class="cover img"><img src="assets/op-04-bonus-longevity.webp" alt="Código de Longevidad de la Piel Coreana" loading="lazy" width="747" height="1000"></div>
+    <div class="btx"><b>Código de Longevidad de la Piel Coreana</b>Lo que las coreanas comen, cómo duermen y el ritual de la tarde que mantiene la piel joven hasta los 80 o 90 años.</div>
+    <div class="bv">US$24</div>
+  </div>
+  <div class="bonus">
+    <div class="cover img"><img src="assets/op-05-bonus-recipes.webp" alt="Recetas de Piel de Adentro hacia Afuera" loading="lazy" width="747" height="1000"></div>
+    <div class="btx"><b>Recetas de Piel de Adentro hacia Afuera</b>Recetas naturales que nutren tu colágeno por dentro y blindan tu rejuvenecimiento.</div>
+    <div class="bv">US$19</div>
+  </div>
+  <div class="bonus">
+    <div class="cover img"><img src="assets/op-07-gift.webp" alt="Regalo sorpresa" loading="lazy" width="672" height="900"></div>
+    <div class="btx"><b>+ un regalo sorpresa</b>Lo único que guardé por 27 años y nunca mostré en público. Quien lo recibe dice que por sí solo ya vale más que todo lo que pagó. Solo quien entra hoy lo descubre.</div>
+    <div class="bv">?</div>
+  </div>
+
+  <!-- ESCASEZ + RECAP -->
+  <h2>Por qué esta página expira</h2>
+  <p>Tu receta queda calibrada en nuestros servidores clínicos, y abrimos <b>pocos cupos nuevos por día</b> para mantener todo personalizado. Cuando tu tiempo termina, tu calibración pasa a la próxima mujer en la fila.</p>
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--ink-soft);margin-bottom:9px">Todo lo que te llevas hoy</div>
+    <div class="g-step" style="margin-bottom:7px"><span class="n" style="background:var(--blueberry)">✓</span><span>El <b>App Ritual Seúl</b>: tu receta calibrada, el tai chi de 3 dedos, recalibración semanal, rituales Piel de Cristal y Sueño <b style="white-space:nowrap">(US$97 de valor)</b></span></div>
+    <div class="g-step" style="margin-bottom:7px"><span class="n">✓</span><span>Protocolo Coreano Anti-Manchas, <b>GRATIS</b> (US$29)</span></div>
+    <div class="g-step" style="margin-bottom:7px"><span class="n">✓</span><span>Código de Longevidad de la Piel Coreana, <b>GRATIS</b> (US$24)</span></div>
+    <div class="g-step" style="margin-bottom:7px"><span class="n">✓</span><span>Recetas de Piel de Adentro hacia Afuera, <b>GRATIS</b> (US$19)</span></div>
+    <div class="g-step" style="margin-bottom:9px"><span class="n">✓</span><span>Regalo sorpresa dentro de la app, <b>GRATIS</b></span></div>
+    <div style="border-top:1.5px solid var(--line);padding-top:9px;font-size:13.5px;font-weight:800;text-align:center">US$97 de programa + <span style="color:var(--gold)">US$72 en bonos gratis</span> &rarr; <span style="color:var(--green)">por solo <span class="price-cta">US$10</span></span></div>
+  </div>
+  <div class="price-box">
+    <div class="old">Valor total: US$169</div>
+    <div class="new"><b class="price-cta">US$10</b><span class="per">pago único</span></div>
+    <div class="pp">Todo esto sale a <b class="pd-val">US$0,48</b> por día</div>
+    <a class="btn green in-card" id="cta-1" href="#">Reactivar mi escudo &rarr;</a>
+    <div class="price-micro">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" fill="#2E9E5B"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Garantía de 30 días &nbsp;·&nbsp; Compra segura
+    </div>
+  </div>
+
+  <div class="car-title">Ellas casi cerraron esta página también</div>
+  <div class="carousel" id="car-b"></div>
+
+  <!-- FAQ -->
+  <h2>Preguntas reales de mujeres antes de empezar</h2>
+  <details class="faq-item" open><summary><span class="fq-av"><img src="assets/faq-01-linda.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Lucía M., 61</span>"Tengo 61 años y soy pésima con la tecnología. ¿Podré usar una app?"</span></summary><div class="fa"><b>Dra. Mina:</b> Si puedes abrir un mensaje, puedes usarla, Lucía. Una pantalla por noche: tu receta, tu video de 2 minutos, listo. Nada que configurar, el test que acabas de hacer ya configuró todo.</div></details>
+  <details class="faq-item"><summary><span class="fq-av"><img src="assets/faq-02-dorothy.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Dora S., 68</span>"Sé sincera: ¿a los 68 no es demasiado tarde para mi piel?"</span></summary><div class="fa"><b>Dra. Mina:</b> Al contrario. En el estudio de Seúl, las mayores mejoras del escudo vinieron de mujeres de más de 60: su escudo llevaba más tiempo apagado, así que reactivarlo cambia todavía más. Tu edad es la razón de que esto funcione, no el obstáculo.</div></details>
+  <details class="faq-item"><summary><span class="fq-av"><img src="assets/faq-03-carol.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Carla B., 55</span>"Mi piel es sensible y tengo rosácea leve. ¿La mascarilla no me va a irritar?"</span></summary><div class="fa"><b>Dra. Mina:</b> El pegamento tiene 3 ingredientes de grado alimenticio en TU proporción: sin ácido, sin retinol, sin fragancia. La app incluye una calibración para piel sensible, y haces la prueba de toque la primera noche, como con cualquier cosa nueva.</div></details>
+  <details class="faq-item"><summary><span class="fq-av"><img src="assets/faq-04-janet.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Juana R., 56</span>"¿En qué se diferencia esto de las diez cremas que tengo en el cajón?"</span></summary><div class="fa"><b>Dra. Mina:</b> Esas cremas quedan ENCIMA de un escudo caído; por eso paran cuando tú paras. El ritual reactiva el escudo para que tu piel se renueve <b>sola</b>, y el <b>tai chi de 3 dedos</b> levanta el músculo. No es un producto, es un método.</div></details>
+  <details class="faq-item"><summary><span class="fq-av"><img src="assets/faq-05-nancy.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Nélida W., 59</span>"¿Cuál es la trampa? ¿Por qué son solo US$10?"</span></summary><div class="fa"><b>Dra. Mina:</b> Porque los ingredientes están en tu supermercado: no puedo cobrarte US$200 por lo que la naturaleza vende por centavos. Pagas por la calibración y el método. Son US$10 solo desde este test: tu perfil ya está cargado, así que te saltas la consulta que todas pagan.</div></details>
+  <details class="faq-item"><summary><span class="fq-av"><img src="assets/faq-06-brenda.webp" alt="" loading="lazy" width="448" height="600"></span><span class="fq-q"><span class="fq-n">Bruna T., 52</span>"Ya probé de todo: cremas, péptidos, hasta bótox. ¿Por qué funcionaría ESTO?"</span></summary><div class="fa"><b>Dra. Mina:</b> Todo lo que probaste trató el síntoma: hidratación por fuera, músculo congelado, renovación forzada. Nada tocó el escudo. Esa es la primera cosa a la que va. Y con 30 días para probar, el riesgo queda conmigo, no contigo.</div></details>
+
+  <!-- LAS DOS MUJERES + PD -->
+  <div class="two-women">
+    <div class="tw-img"><img src="assets/op-08-two-women.webp" alt="Dos líneas del tiempo" loading="lazy" width="1000" height="908"></div>
+    <b>Dentro de un año, existirán dos mujeres con tu perfil de piel exacto.</b><br><br>
+    Una cerró esta página, siguió con las cremas y sigue huyendo de la cámara en las cenas familiares.<br><br>
+    La otra gastó US$10 hoy, hizo los 2 minutos antes de dormir y dejó de pensar en su piel, porque dejó de ser un problema.<br><br>
+    <b>Mismo punto de partida. Mismo escudo. Una decisión.</b>
+  </div>
+  <a class="btn green" id="cta-3" href="#">Empezar mis 21 días por <span class="price-cta">US$10</span> &rarr;</a>
+  <div class="pay-badges">VISA &nbsp;·&nbsp; MASTERCARD &nbsp;·&nbsp; 🔒 COMPRA SEGURA SSL</div>
+  <div class="ps"><b>P.D.</b> <span class="sl-name2">Amiga</span>, tu escudo todavía está <b><span id="sl-score2">apagado</span></b>. En 21 días puede ser eso que dejas de preocuparte. La receta está lista, solo falta tu primera noche.</div>
+
+  <div class="car-title">La última palabra es de ellas</div>
+  <div class="carousel" id="car-c"></div>
+
+</div>
+
+<footer class="q-footer">
+  Los resultados pueden variar. Este programa tiene carácter informativo y no sustituye la orientación médica. Los testimonios reflejan experiencias individuales.
+  © Ritual Seúl 50+
+</footer>
+
+<!-- Fallback global de imagen + stubs de tracking (copiado de index.html). La etapa 9 reemplaza los stubs por el Pixel + CAPI reales. -->
+<script>
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.target.onerror = null;
+      e.target.src = 'assets/placeholder.svg';
+    }
+  }, true);
+  window.track = window.track || function () {};
+  window.getUTMQuery = window.getUTMQuery || function () { return ''; };
+  window.appendUTM = window.appendUTM || function (u) { return u; };
+</script>
+
+<!-- NOTA: el order bump (US$9) y los upsells (US$27 / US$19) y downsell (US$10) viven en el checkout de Hotmart, no en esta página. Placeholders:
+     order bump:  https://pay.hotmart.com/J106789384M
+     upsell-1:    https://pay.hotmart.com/G106805169N
+     upsell-2:    https://pay.hotmart.com/F106805224W
+     downsell:    https://pay.hotmart.com/U106805193H -->
+
+<script src="js/config.js"></script>
+<script>
+(function(){
+  /* Checkout Hotmart (placeholder, reemplazar en la etapa 9) */
+  var CHECKOUT_URL = 'https://pay.hotmart.com/A106789289T';
+  /* Checkout con descuento de la ruleta (20% OFF), placeholder Hotmart */
+  /* Oferta "Ruleta 20% OFF (funil)" criada na Hotmart: US$8 (código 1gr1hw6z). */
+  var CHECKOUT_URL_DISCOUNT = 'https://pay.hotmart.com/A106789289T?off=1gr1hw6z';
+  function usd(v){ return 'US$' + v.toFixed(2).replace('.', ','); }
+  function usdShort(v){ return 'US$' + (v % 1 === 0 ? String(v) : v.toFixed(2).replace('.', ',')); }
+
+  var a = {};
+  try { a = (JSON.parse(localStorage.getItem('kbm_quiz_v1')) || {}).answers || {}; } catch(e){}
+  var name = a.name || 'Amiga';
+  var status = shieldStatus(a);
+  document.getElementById('sl-name').textContent = name;
+  document.querySelectorAll('.sl-name2').forEach(function(el){ el.textContent = name; });
+  document.getElementById('sl-score2').textContent = status.label.toLowerCase();
+
+  var PAIN_LAB = { wrinkles:'Arrugas profundas', sagging:'Piel flácida', neck:'Cuello y papada', crowsfeet:'Patas de gallo', marionette:'Líneas de marioneta', firmness:'Pérdida de firmeza' };
+  var TRIED_LAB = { creams:'Cremas y sérums', retinol:'Retinol', collagen:'Cápsulas de colágeno', peptides:'Péptidos', botox:'Bótox' };
+  var ENV_LAB = { city:'Ciudad (contaminación)', sun:'Aire libre (sol)', indoors:'En casa (aire acond.)', mix:'Exposición mixta' };
+  var GOAL_LAB = { wrinkles:'Suavizar las líneas de expresión', firm:'Firmar y levantar', glow:'Brillo sin maquillaje', all:'Rejuvenecimiento completo' };
+  document.getElementById('rc-age').textContent = a.age_bucket || '45-64';
+  document.getElementById('rc-goal').textContent = GOAL_LAB[a.goal] || 'Piel más joven';
+  document.getElementById('rc-shield').textContent = status.label;
+  var pains = (a.pains || []).map(function(p){ return PAIN_LAB[p]; }).filter(Boolean);
+  document.getElementById('rc-pains').textContent = pains.length ? pains.join(' · ') : 'Signos de envejecimiento';
+  var tried = (a.tried || []).filter(function(t){ return t !== 'nothing'; }).map(function(t){ return TRIED_LAB[t]; }).filter(Boolean);
+  document.getElementById('rc-tried').textContent = tried.length ? tried.join(', ') : 'Nada aún';
+  document.getElementById('rc-env').textContent = ENV_LAB[a.toxin_env] || '-';
+
+  var goalMap = { '5':'5 años más joven', '10':'10 años más joven', '15':'15 años más joven', 'surprise':'máximo rejuvenecimiento' };
+  if (a.goal_years) document.getElementById('sl-goal').textContent = 'Resultado esperado: tu meta de ' + goalMap[a.goal_years];
+  var goalShort = { wrinkles:'suavizar líneas', firm:'firmar y levantar', glow:'brillo', all:'rejuvenecer' }[a.goal];
+  document.getElementById('profile-badge').textContent =
+    'Calibrado para ' + (a.name ? a.name : 'ti') + (a.age_bucket ? ' · ' + a.age_bucket : '') + (goalShort ? ' · meta: ' + goalShort : '');
+  var zl = (typeof zoneLabels === 'function') ? zoneLabels(a.zones) : [];
+  var zoneText = zl.length ? zl.join(', ') : 'tus zonas objetivo';
+  var pz = document.getElementById('plan-zones');
+  if (pz) pz.textContent = zoneText;
+
+  /* ---- CARRUSELES DE TESTIMONIOS ---- */
+  function baSlide(p){
+    return '<div class="ba-card testi"><div class="ba-pair">'
+      + '<div class="half"><span class="ba-tag">Antes</span><img src="' + p.before + '" alt="" loading="lazy"></div>'
+      + '<div class="half"><span class="ba-tag after">Después</span><img src="' + p.after + '" alt="" loading="lazy"></div></div>'
+      + '<div class="ba-meta"><div class="stars">★★★★★</div><div class="ba-name">' + p.n + ' <span style="color:var(--green);font-size:12px;font-weight:800">✔ Verificada</span></div>'
+      + '<div class="ba-quote">"' + p.q + '"</div></div></div>';
+  }
+  function mountCarousel(id, items, ms){
+    var el = document.getElementById(id);
+    if (!el || !items.length) return;
+    el.innerHTML = items.map(function(p, i){
+      var s = baSlide(p);
+      if (i > 0) s = s.replace(/ src="/g, ' data-src="');
+      return '<div class="cslide">' + s + '</div>';
+    }).join('');
+    var dotsWrap = document.createElement('div');
+    dotsWrap.className = 'car-dots';
+    dotsWrap.innerHTML = items.map(function(_, i){ return '<span class="dot' + (i===0?' active':'') + '"></span>'; }).join('');
+    el.parentNode.insertBefore(dotsWrap, el.nextSibling);
+    if (items.length > 1) {
+      var hint = document.createElement('div');
+      hint.className = 'swipe-hint';
+      hint.textContent = 'desliza';
+      el.parentNode.insertBefore(hint, dotsWrap.nextSibling);
+    }
+    var slides = el.querySelectorAll('.cslide'), dots = dotsWrap.querySelectorAll('.dot'), cur = 0, touched = false;
+    function hyd(idx){ var s = slides[idx]; if (s) s.querySelectorAll('img[data-src]').forEach(function(im){ im.src = im.getAttribute('data-src'); im.removeAttribute('data-src'); }); }
+    hyd(1);
+    function setActive(idx){ dots.forEach(function(d, j){ d.classList.toggle('active', j === idx); }); }
+    dots.forEach(function(d, j){ d.addEventListener('click', function(){ touched = true; el.scrollTo({ left: j * el.clientWidth, behavior: 'smooth' }); }); });
+    var raf;
+    el.addEventListener('scroll', function(){
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function(){
+        var idx = Math.round(el.scrollLeft / el.clientWidth);
+        if (idx !== cur) { cur = idx; setActive(idx); hyd(idx); hyd(idx + 1); }
+      });
+    });
+    el.addEventListener('touchstart', function(){ touched = true; }, { passive: true });
+    var timer = setInterval(function(){
+      if (touched) { clearInterval(timer); return; }
+      cur = (cur + 1) % slides.length;
+      hyd(cur); hyd(cur + 1);
+      setActive(cur);
+      el.scrollTo({ left: cur * el.clientWidth, behavior: 'smooth' });
+    }, ms || 3500);
+  }
+  var ALL = [];
+  Object.keys(TESTIMONIALS_BY_METHOD).forEach(function(k){
+    TESTIMONIALS_BY_METHOD[k].forEach(function(t){ if (t.before && t.after) ALL.push(t); });
+  });
+  var FAST_NAMES = ['Diana, 58','Carla, 54','Margarita, 65','Sonia, 55'];
+  var FAST = ALL.filter(function(t){ return FAST_NAMES.indexOf(t.n) !== -1; });
+  var REST = ALL.filter(function(t){ return FAST_NAMES.indexOf(t.n) === -1; });
+  mountCarousel('car-fast', FAST, 3000);
+  mountCarousel('car-a', REST.slice(0, 4), 3200);
+  mountCarousel('car-b', REST.slice(4, 7), 3400);
+  mountCarousel('car-c', REST.slice(7), 3600);
+
+  /* ---- timer ---- */
+  var total = 14 * 60 + 59;
+  var el = document.getElementById('timer');
+  var ctaTimers = document.querySelectorAll('.cta-t');
+  setInterval(function(){
+    if (total > 0) total--;
+    var m = Math.floor(total / 60), s = total % 60;
+    var txt = m + ':' + (s < 10 ? '0' : '') + s;
+    el.textContent = txt;
+    ctaTimers.forEach(function(t){ t.textContent = txt; });
+  }, 1000);
+
+  document.getElementById('cta-top').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('price-1').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    track('TopBarCTA', {});
+  });
+
+  var url = appendUTM(CHECKOUT_URL);
+  ['cta-0','cta-1','cta-2','cta-3','cta-4'].forEach(function(id){
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    btn.href = url;
+    btn.addEventListener('click', function(){ track('InitiateCheckout', { position: id }); });
+  });
+
+  track('SalesPageView', { shield: status.label, goal: a.goal_years || null });
+
+  /* ============ EXIT-INTENT + RULETA ============ */
+  var PRICE_FULL = 10;
+  var PRICE_WHEEL = Math.round(PRICE_FULL * 0.8 * 100) / 100;
+  var PD_FULL = usd(PRICE_FULL / 21), PD_WHEEL = usd(PRICE_WHEEL / 21);
+  document.querySelectorAll('.price-cta').forEach(function(pc){ pc.textContent = usdShort(PRICE_FULL); });
+  document.querySelectorAll('.pd-val').forEach(function(pd){ pd.textContent = PD_FULL; });
+  document.querySelectorAll('.pd-cta').forEach(function(pd){ pd.textContent = PD_FULL + '/día'; });
+  var wheelDone = false;
+  try { wheelDone = localStorage.getItem('kbm_wheel') === '1'; } catch(e){}
+  if (wheelDone) applyWheelDiscount();
+
+  function applyWheelDiscount(){
+    try { localStorage.setItem('kbm_wheel', '1'); } catch(e){}
+    wheelDone = true;
+    document.querySelectorAll('.price-box').forEach(function(pb){
+      var tag = document.createElement('div');
+      tag.className = 'wheel-applied';
+      tag.textContent = '🎡 Descuento de la ruleta aplicado: 20% OFF';
+      pb.parentNode.insertBefore(tag, pb);
+    });
+    document.querySelectorAll('.pd-val').forEach(function(pd){ pd.textContent = PD_WHEEL; });
+    document.querySelectorAll('.pd-cta').forEach(function(pd){ pd.textContent = PD_WHEEL + '/día'; });
+    document.querySelectorAll('.price-cta').forEach(function(pc){ pc.textContent = usd(PRICE_WHEEL); });
+    var dUrl = appendUTM(CHECKOUT_URL_DISCOUNT);
+    ['cta-0','cta-1','cta-2','cta-3','cta-4'].forEach(function(id){
+      var btn = document.getElementById(id);
+      if (btn) btn.href = dUrl;
+    });
+  }
+
+  var SEGS = ['50% OFF','5% OFF','30% OFF','10% OFF','40% OFF','15% OFF','20% OFF','BONO'];
+  var WIN_INDEX = 6;
+  function wheelSvg(){
+    var cx = 136, cy = 136, r = 126, html = '';
+    for (var i = 0; i < 8; i++){
+      var a0 = (i * 45 - 90) * Math.PI / 180, a1 = ((i + 1) * 45 - 90) * Math.PI / 180;
+      var x0 = cx + r * Math.cos(a0), y0 = cy + r * Math.sin(a0);
+      var x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+      var fill = i % 2 === 0 ? '#DA5749' : '#E8D28A';
+      html += '<path d="M' + cx + ' ' + cy + ' L' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + r + ' ' + r + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' Z" fill="' + fill + '" stroke="#C9A227" stroke-width="1.5"/>';
+      var mid = (i * 45 + 22.5 - 90) * Math.PI / 180;
+      var tx = cx + r * 0.62 * Math.cos(mid), ty = cy + r * 0.62 * Math.sin(mid);
+      var rot = i * 45 + 22.5;
+      var color = i % 2 === 0 ? '#FFFFFF' : '#4A3F1E';
+      html += '<text x="' + tx.toFixed(1) + '" y="' + ty.toFixed(1) + '" transform="rotate(' + rot + ' ' + tx.toFixed(1) + ' ' + ty.toFixed(1) + ')" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" font-weight="900" fill="' + color + '">' + SEGS[i] + '</text>';
+    }
+    html += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#C9A227" stroke-width="7"/>';
+    html += '<circle cx="' + cx + '" cy="' + cy + '" r="24" fill="#C9A227"/><text x="' + cx + '" y="' + (cy + 7) + '" text-anchor="middle" font-size="20" font-weight="900" fill="#fff" font-family="Inter,sans-serif">미</text>';
+    return '<svg id="wheel-svg" viewBox="0 0 272 272" xmlns="http://www.w3.org/2000/svg">' + html + '</svg>';
+  }
+
+  function showGiftPopup(){
+    if (wheelDone || document.getElementById('gift-popup')) return;
+    var div = document.createElement('div');
+    div.className = 'popup-overlay';
+    div.id = 'gift-popup';
+    div.innerHTML = '<div class="popup" id="gift-inner">'
+      + '<button class="px" id="gift-x">×</button>'
+      + '<span class="gift-emoji">🎁</span>'
+      + '<h3>Espera' + (a.name ? ', ' + a.name : '') + ', tenemos un regalo para ti!</h3>'
+      + '<p>Antes de irte, la Dra. Mina guardó <b>un giro</b> de la ruleta para tu test. Puede desbloquear un descuento en tu ritual.</p>'
+      + '<button class="btn" id="gift-open">Abrir mi regalo &rarr;</button>'
+      + '<button class="later" id="gift-later">No, gracias</button>'
+      + '</div>';
+    document.body.appendChild(div);
+    track('ExitIntentOffer', {});
+    function close(){ var el = document.getElementById('gift-popup'); if (el) el.remove(); }
+    document.getElementById('gift-x').addEventListener('click', close);
+    document.getElementById('gift-later').addEventListener('click', close);
+    document.getElementById('gift-open').addEventListener('click', showWheel);
+  }
+
+  function showWheel(){
+    var inner = document.getElementById('gift-inner');
+    inner.innerHTML = '<div class="wheel-kicker">Tu premio te espera</div>'
+      + '<h3>Gira la <span style="color:var(--gold)">Rueda de la Juventud</span></h3>'
+      + '<p>El descuento expira al alcanzar las primeras <b>150.000 mujeres</b>.</p>'
+      + '<div class="wheel-wrap"><div class="wheel-pointer"></div>' + wheelSvg() + '</div>'
+      + '<div id="wheel-zone"><button class="btn green" id="wheel-spin">GIRAR LA RUEDA</button>'
+      + '<p style="margin-top:8px;font-size:12px"><b>Un solo giro.</b> El descuento termina al alcanzar 150.000 mujeres.</p></div>';
+    track('WheelView', {});
+    document.getElementById('wheel-spin').addEventListener('click', function(){
+      this.disabled = true;
+      var rotation = 360 * 5 + (360 - (WIN_INDEX * 45 + 22.5));
+      document.getElementById('wheel-svg').style.transform = 'rotate(' + rotation + 'deg)';
+      setTimeout(function(){
+        document.getElementById('wheel-zone').innerHTML =
+          '<div class="wheel-result">🎉 ¡Ganaste <span style="color:var(--green)">20% OFF</span>!'
+          + '<small>Tu ritual: <span class="discount-strike">' + usd(PRICE_FULL) + '</span> &rarr; <b>' + usd(PRICE_WHEEL) + '</b> (solo ' + PD_WHEEL + '/día). Aplicado automáticamente.</small></div>'
+          + '<button class="btn green" id="wheel-claim">Quiero mi 20% OFF &rarr;</button>';
+        track('WheelWin', { discount: 20 });
+        document.getElementById('wheel-claim').addEventListener('click', function(){
+          applyWheelDiscount();
+          var el = document.getElementById('gift-popup'); if (el) el.remove();
+          var pb = document.querySelector('.price-box');
+          if (pb) pb.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }, 4700);
+    });
+  }
+
+  history.pushState({ kbmOffer: 1 }, '');
+  window.addEventListener('popstate', function(){
+    if (!wheelDone) { history.pushState({ kbmOffer: 1 }, ''); showGiftPopup(); }
+  });
+  var giftMouseShown = false;
+  document.addEventListener('mouseout', function(e){
+    if (giftMouseShown || e.relatedTarget || wheelDone) return;
+    if (e.clientY <= 0) { giftMouseShown = true; showGiftPopup(); }
+  });
+})();
+</script>
+</body>
+</html>

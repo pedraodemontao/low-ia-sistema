@@ -1,0 +1,301 @@
+/* ============================================================
+   Ritual Seúl 50+ · app (PWA)
+   Mobile-first. Público 50-62: corpo 17px, alvos de toque ≥48px,
+   contraste alto. Paleta: rojo ginseng + crema + oro.
+   ============================================================ */
+
+:root {
+  --rojo: #8e1b1b;
+  --rojo-osc: #5c0f0f;
+  --rojo-prof: #3e0a0a;
+  --crema: #f7efe3;
+  --crema-claro: #fdf9f2;
+  --oro: #c9a227;
+  --oro-claro: #e3c56b;
+  --tinta: #2b1d16;
+  --tinta-suave: #6b5648;
+  --linea: #e7dccb;
+  --ok: #2e7d5b;
+
+  --nav-h: 4.5rem;
+  --radio: 0.875rem;
+  --sombra: 0 1px 3px rgba(43, 29, 22, 0.08), 0 6px 20px rgba(43, 29, 22, 0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--crema-claro);
+  overscroll-behavior-y: none;
+}
+
+/* ---------- layout ---------- */
+.app {
+  max-width: 34rem;
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+.pad { padding: 1.25rem; }
+/* Respiro no fim de toda página: o último botão nunca encosta na nav. */
+.pad:last-child { padding-bottom: 2rem; }
+.stack > * + * { margin-top: 1rem; }
+.stack-sm > * + * { margin-top: 0.5rem; }
+
+/* ---------- topo ---------- */
+.top {
+  background: linear-gradient(155deg, var(--rojo) 0%, var(--rojo-osc) 100%);
+  color: var(--crema);
+  padding: calc(1.25rem + env(safe-area-inset-top)) 1.25rem 1.5rem;
+}
+.top .marca {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--oro-claro);
+}
+.top h1 { font-size: 1.6rem; line-height: 1.2; margin-top: 0.5rem; font-weight: 700; }
+.top p { color: #ecdcc6; margin-top: 0.4rem; font-size: 0.95rem; }
+
+/* ---------- títulos ---------- */
+h2 { font-size: 1.3rem; line-height: 1.25; color: var(--rojo-osc); font-weight: 700; }
+h3 { font-size: 1.08rem; color: var(--rojo-osc); font-weight: 700; }
+.kicker {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--oro);
+}
+
+p { margin-bottom: 0.75rem; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--rojo-osc); }
+
+/* ---------- card ---------- */
+.card {
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  padding: 1.1rem;
+  box-shadow: var(--sombra);
+}
+.card + .card { margin-top: 0.875rem; }
+
+/* ---------- progresso ---------- */
+.progreso-num { font-size: 3.5rem; font-weight: 800; color: var(--rojo); line-height: 1; }
+.barra { height: 0.6rem; background: var(--linea); border-radius: 99px; overflow: hidden; }
+.barra > i {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--rojo), var(--oro));
+  border-radius: 99px; transition: width 0.4s ease;
+}
+
+/* ---------- botões ---------- */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  width: 100%; min-height: 3.25rem; padding: 0 1.25rem;
+  border: 0; border-radius: var(--radio);
+  background: var(--rojo); color: var(--crema);
+  font-size: 1.05rem; font-weight: 700; font-family: inherit;
+  cursor: pointer; text-decoration: none;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+.btn:active { transform: scale(0.985); background: var(--rojo-osc); }
+.btn.ghost { background: transparent; color: var(--rojo); border: 2px solid var(--rojo); }
+.btn.sm { min-height: 2.75rem; font-size: 0.95rem; }
+
+/* ---------- lista de links ---------- */
+.enlaces { list-style: none; }
+.enlaces a {
+  display: flex; align-items: center; gap: 0.875rem;
+  min-height: 3.75rem; padding: 0.75rem 1.1rem;
+  background: #fff; border: 1px solid var(--linea); border-radius: var(--radio);
+  color: inherit; text-decoration: none; box-shadow: var(--sombra);
+}
+.enlaces a:active { background: var(--crema); }
+.enlaces li + li { margin-top: 0.6rem; }
+.enlaces .ico { font-size: 1.5rem; flex: 0 0 auto; }
+.enlaces .txt b { display: block; color: var(--rojo-osc); font-size: 1.02rem; }
+.enlaces .txt span { color: var(--tinta-suave); font-size: 0.88rem; }
+.enlaces .chev { margin-left: auto; color: var(--oro); font-size: 1.2rem; }
+
+/* ---------- checklist (toque grande) ---------- */
+.check { list-style: none; }
+.check li + li { margin-top: 0.5rem; }
+.check label {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  min-height: 3rem; padding: 0.7rem 0.9rem;
+  background: #fff; border: 1px solid var(--linea); border-radius: var(--radio);
+  cursor: pointer; font-size: 1rem;
+}
+.check input { position: absolute; opacity: 0; pointer-events: none; }
+.check .box {
+  flex: 0 0 auto; width: 1.6rem; height: 1.6rem; margin-top: 0.05rem;
+  border: 2px solid var(--rojo); border-radius: 0.4rem;
+  display: flex; align-items: center; justify-content: center;
+  color: transparent; font-size: 1rem; font-weight: 700;
+  transition: background 0.15s ease;
+}
+.check input:checked + .box { background: var(--rojo); color: var(--crema); }
+.check input:checked ~ .lbl { color: var(--tinta-suave); text-decoration: line-through; }
+
+/* ---------- avisos ---------- */
+.aviso { border-radius: var(--radio); padding: 0.95rem 1.05rem; font-size: 0.97rem; }
+.aviso b {
+  display: block; font-size: 0.72rem; letter-spacing: 0.12em;
+  text-transform: uppercase; margin-bottom: 0.35rem;
+}
+.aviso.tip { background: #f5ecd6; } .aviso.tip b { color: #97781a; }
+.aviso.alerta { background: #f9e6e2; } .aviso.alerta b { color: var(--rojo); }
+.aviso.nota { background: #efe7dc; } .aviso.nota b { color: #7a5c3e; }
+.aviso.mina { background: var(--rojo-prof); color: var(--crema); font-style: italic; }
+.aviso.mina b { color: var(--oro-claro); font-style: normal; }
+
+/* ---------- receita ---------- */
+.receta { border: 1.5px solid var(--oro); border-radius: var(--radio); padding: 1rem; background: #fff; }
+.receta h4 {
+  text-align: center; color: var(--rojo); font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;
+}
+.receta table { width: 100%; border-collapse: collapse; }
+.receta td { padding: 0.55rem 0; border-bottom: 1px solid #efe4d0; font-size: 1rem; }
+.receta tr:last-child td { border-bottom: 0; }
+.receta td:last-child { text-align: right; font-weight: 700; color: var(--rojo-osc); white-space: nowrap; }
+
+/* ---------- passos ---------- */
+.paso { display: flex; gap: 0.875rem; }
+.paso + .paso { margin-top: 0.875rem; }
+.paso .n {
+  flex: 0 0 auto; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--rojo); color: var(--crema);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.95rem;
+}
+.paso b { display: block; color: var(--rojo-osc); }
+
+/* ---------- diagrama ---------- */
+.diagrama { text-align: center; margin: 0.5rem 0; }
+.diagrama svg { max-width: 100%; height: auto; }
+.diagrama .leyenda { font-size: 0.87rem; color: var(--tinta-suave); font-style: italic; margin-top: 0.4rem; }
+
+/* ---------- nav inferior ---------- */
+.nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  display: flex; justify-content: space-around;
+  background: rgba(253, 249, 242, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--linea);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.nav a {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.15rem; min-height: var(--nav-h); padding: 0.5rem 0.25rem;
+  text-decoration: none; color: var(--tinta-suave); font-size: 0.7rem; font-weight: 600;
+}
+.nav a .ico { font-size: 1.35rem; line-height: 1; }
+.nav a[aria-current="page"] { color: var(--rojo); }
+
+/* ---------- utilitários ---------- */
+.muted { color: var(--tinta-suave); font-size: 0.92rem; }
+.centro { text-align: center; }
+.volver {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--crema); text-decoration: none; font-size: 0.92rem; font-weight: 600;
+  min-height: 2.75rem;
+}
+.sep { height: 1px; background: var(--linea); margin: 1.25rem 0; }
+.hecho { color: var(--ok); font-weight: 700; }
+
+/* ---------- campos de formulário ---------- */
+.campo {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.85rem 1rem;
+  margin-top: 0.75rem;
+  border: 1.5px solid var(--linea);
+  border-radius: var(--radio);
+  background: #fff;
+  font-family: inherit;
+  font-size: 1.05rem;
+  color: var(--tinta);
+}
+.campo:focus { outline: none; border-color: var(--rojo); }
+textarea.campo { min-height: 5.5rem; resize: vertical; line-height: 1.5; }
+
+/* ---------- opções do test ---------- */
+.opciones { margin-top: 1rem; }
+.opcion {
+  display: block; width: 100%; text-align: left;
+  min-height: 4.25rem; padding: 0.9rem 1.1rem;
+  margin-bottom: 0.65rem;
+  background: #fff; border: 1.5px solid var(--linea); border-radius: var(--radio);
+  font-family: inherit; font-size: 1rem; color: var(--tinta); cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.opcion:active { background: var(--crema); }
+.opcion.activa { border-color: var(--rojo); background: #fdf4f2; }
+.opcion b { display: block; color: var(--rojo-osc); font-size: 1.05rem; margin-bottom: 0.15rem; }
+.opcion span { color: var(--tinta-suave); font-size: 0.9rem; }
+
+/* ---------- cronômetro ---------- */
+.crono {
+  font-size: 5rem; font-weight: 800; color: var(--rojo);
+  line-height: 1; margin: 1rem 0 1.25rem;
+  font-variant-numeric: tabular-nums;
+}
+.crono span { font-size: 1.75rem; color: var(--tinta-suave); margin-left: 0.15rem; }
+
+/* ---------- sequência de dias ---------- */
+.racha { color: var(--rojo); font-weight: 700; margin-left: 0.4rem; }
+
+/* ---------- nota do ingrediente ---------- */
+.ing-nota {
+  display: block; font-style: normal; font-size: 0.82rem;
+  color: var(--tinta-suave); margin-top: 0.15rem;
+}
+
+/* ---------- diário ---------- */
+.foto { margin-top: 0.75rem; }
+.foto img {
+  width: 100%; border-radius: var(--radio); display: block;
+  border: 1px solid var(--linea);
+}
+.foto figcaption {
+  text-align: center; font-size: 0.85rem; color: var(--tinta-suave);
+  margin-top: 0.35rem;
+}
+.comparar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.comparar .foto { margin-top: 0; }
+.borrar {
+  margin-left: auto; background: transparent; border: 0;
+  color: var(--tinta-suave); font-size: 1rem; cursor: pointer;
+  padding: 0.35rem 0.5rem; font-family: inherit;
+}
+
+/* Instalação do PWA */
+.instalar {
+  position: fixed; left: 0.75rem; right: 0.75rem;
+  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom) + 0.75rem);
+  z-index: 60;
+  display: flex; align-items: center; gap: 0.75rem;
+  background: var(--rojo-prof); color: var(--crema);
+  border-radius: var(--radio); padding: 0.85rem 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.instalar p { font-size: 0.9rem; margin: 0; }
+.instalar button {
+  margin-left: auto; flex: 0 0 auto;
+  background: var(--oro); color: var(--rojo-prof);
+  border: 0; border-radius: 0.6rem; padding: 0.6rem 0.9rem;
+  font-weight: 700; font-family: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.instalar .x {
+  background: transparent; color: var(--crema); opacity: 0.7;
+  padding: 0.6rem 0.3rem; margin-left: 0;
+}
